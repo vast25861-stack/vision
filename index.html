@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Машинное зрение для промышленности — VDT Vision | Системы контроля качества</title>
+<meta name="description" content="VDT Vision — системы машинного зрения и AI Vision для промышленной автоматизации: контроль дефектов, маркировки, измерение геометрии, интеграция с PLC / SCADA / MES.">
+<meta name="keywords" content="системы машинного зрения, промышленное машинное зрение, AI Vision, контроль качества, автоматический контроль, интеграция PLC SCADA MES, контроль дефектов, контроль маркировки, измерение геометрии">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#hero" class="logo" aria-label="VDT Vision">
+      <span class="logo__mark">
+        <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="30" height="30" rx="8" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 11l4.5 11L16 14.5 19.5 22 24 11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="16" cy="9" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      <span class="logo__text">VDT <b>Vision</b></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#solutions" class="nav__link">Решения</a>
+      <a href="#tasks" class="nav__link">Задачи</a>
+      <a href="#industries" class="nav__link">Отрасли</a>
+      <a href="#demo" class="nav__link">Демо</a>
+      <a href="#integration" class="nav__link">Интеграция</a>
+      <a href="#cases" class="nav__link">Кейсы</a>
+      <a href="#faq" class="nav__link">FAQ</a>
+      <a href="#contact" class="btn btn--accent nav__cta">Обсудить задачу</a>
+    </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--accent btn--sm">Обсудить задачу</a>
+      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 01 HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero__grid-lines" aria-hidden="true"></div>
+  <div class="container hero__inner">
+    <div class="hero__content" data-reveal>
+      <div class="label label--line">MACHINE VISION / AI VISION</div>
+      <h1 class="hero__title">Машинное зрение для промышленности</h1>
+      <p class="hero__sub">Контроль качества, маркировки, геометрии и производственных процессов с интеграцией в PLC&nbsp;/&nbsp;SCADA&nbsp;/&nbsp;MES.</p>
+
+      <div class="hero__cta">
+        <a href="#contact" class="btn btn--accent btn--lg">Обсудить задачу</a>
+        <a href="#solutions" class="btn btn--ghost btn--lg">Посмотреть решения</a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hstat"><b>24/7</b><span>контроль на линии</span></div>
+        <div class="hstat"><b>OK / NOK</b><span>сигнал в PLC</span></div>
+        <div class="hstat"><b>&lt; 100 мс</b><span>время анализа</span></div>
+      </div>
+    </div>
+
+    <div class="hero__visual" data-reveal data-reveal-delay="120">
+      <div class="scene">
+        <svg class="scene__svg" viewBox="0 0 760 620" role="img" aria-label="Промышленная линия с камерой машинного зрения, конвейером, деталями, bounding box и результатом контроля">
+          <defs>
+            <linearGradient id="gBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#151A24"/><stop offset="1" stop-color="#0A0C11"/>
+            </linearGradient>
+            <linearGradient id="gBelt" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2A3140"/><stop offset="1" stop-color="#171C26"/>
+            </linearGradient>
+            <linearGradient id="gMetal" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#C9D2E0"/><stop offset="0.5" stop-color="#8892A4"/><stop offset="1" stop-color="#5A6374"/>
+            </linearGradient>
+            <linearGradient id="gCam" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#39414F"/><stop offset="1" stop-color="#1C212C"/>
+            </linearGradient>
+            <linearGradient id="gScan" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#D6FF3D" stop-opacity="0"/>
+              <stop offset="0.5" stop-color="#D6FF3D" stop-opacity=".85"/>
+              <stop offset="1" stop-color="#D6FF3D" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+
+          <rect width="760" height="620" rx="18" fill="url(#gBg)"/>
+          <g stroke="#FFFFFF" stroke-opacity=".05">
+            <path d="M0 155h760M0 310h760M0 465h760M190 0v620M380 0v620M570 0v620"/>
+          </g>
+
+          <g class="scene__cam">
+            <rect x="470" y="48" width="14" height="150" fill="#2A3140"/>
+            <rect x="392" y="176" width="170" height="18" rx="4" fill="#333B4B"/>
+            <rect x="404" y="194" width="146" height="96" rx="12" fill="url(#gCam)" stroke="#4A5466"/>
+            <rect x="418" y="208" width="46" height="24" rx="4" fill="#0E1117" stroke="#5A6374"/>
+            <circle cx="441" cy="220" r="5" fill="#D6FF3D"/>
+            <rect x="474" y="206" width="62" height="70" rx="8" fill="#171C26" stroke="#4A5466"/>
+            <circle cx="505" cy="241" r="26" fill="#0B0E13" stroke="#6E788C" stroke-width="3"/>
+            <circle cx="505" cy="241" r="16" fill="#101828"/>
+            <circle cx="498" cy="234" r="6" fill="#5B8CFF" opacity=".8"/>
+            <circle cx="512" cy="250" r="3" fill="#D6FF3D" opacity=".9"/>
+            <path d="M487 268 L400 470 L612 470 L523 268 Z" fill="#D6FF3D" opacity=".05"/>
+            <path d="M487 268 L400 470 L612 470 L523 268 Z" fill="none" stroke="#D6FF3D" stroke-opacity=".25" stroke-dasharray="6 8"/>
+            <text x="556" y="212" class="svg-tag" fill="#9FB0CC">CAM-01 · 5MP</text>
+          </g>
+
+          <g>
+            <rect x="40" y="470" width="680" height="16" rx="4" fill="#39414F"/>
+            <rect x="40" y="486" width="680" height="52" rx="6" fill="url(#gBelt)"/>
+            <rect x="40" y="540" width="680" height="10" rx="4" fill="#0E1117"/>
+            <g class="scene__rollers" fill="#4A5466">
+              <circle cx="90" cy="512" r="16"/><circle cx="200" cy="512" r="16"/><circle cx="310" cy="512" r="16"/>
+              <circle cx="420" cy="512" r="16"/><circle cx="530" cy="512" r="16"/><circle cx="640" cy="512" r="16"/>
+            </g>
+            <g stroke="#0E1117" stroke-width="2">
+              <path d="M90 496v32M200 496v32M310 496v32M420 496v32M530 496v32M640 496v32"/>
+            </g>
+            <g class="scene__belt-lines" stroke="#6E788C" stroke-opacity=".35" stroke-width="3">
+              <path d="M60 512h40M140 512h40M250 512h40M360 512h40M470 512h40M580 512h40M690 512h30"/>
+            </g>
+            <g fill="#232A36">
+              <rect x="70" y="550" width="16" height="52"/><rect x="674" y="550" width="16" height="52"/>
+            </g>
+          </g>
+
+          <g class="scene__parts">
+            <g transform="translate(120,392)">
+              <ellipse cx="60" cy="76" rx="62" ry="14" fill="#000" opacity=".35"/>
+              <rect x="8" y="18" width="104" height="58" rx="8" fill="url(#gMetal)"/>
+              <rect x="8" y="18" width="104" height="16" rx="6" fill="#E4EAF3" opacity=".55"/>
+              <circle cx="60" cy="48" r="17" fill="#5A6374"/><circle cx="60" cy="48" r="8" fill="#2A3140"/>
+            </g>
+            <g transform="translate(300,392)">
+              <ellipse cx="60" cy="76" rx="62" ry="14" fill="#000" opacity=".35"/>
+              <rect x="8" y="18" width="104" height="58" rx="8" fill="url(#gMetal)"/>
+              <rect x="8" y="18" width="104" height="16" rx="6" fill="#E4EAF3" opacity=".55"/>
+              <path d="M30 60 L52 38 L74 56 L96 34" stroke="#FF4D4F" stroke-width="3" fill="none" stroke-linecap="round"/>
+              <circle cx="96" cy="34" r="5" fill="#FF4D4F"/>
+            </g>
+            <g transform="translate(480,392)">
+              <ellipse cx="60" cy="76" rx="62" ry="14" fill="#000" opacity=".35"/>
+              <rect x="8" y="18" width="104" height="58" rx="8" fill="url(#gMetal)"/>
+              <rect x="8" y="18" width="104" height="16" rx="6" fill="#E4EAF3" opacity=".55"/>
+              <g transform="translate(38,36)" fill="#12151C">
+                <rect width="44" height="30" fill="#F3F6FA"/>
+                <rect x="3" y="3" width="8" height="8"/><rect x="14" y="3" width="4" height="4"/><rect x="21" y="3" width="6" height="6"/>
+                <rect x="3" y="15" width="4" height="6"/><rect x="10" y="14" width="8" height="4"/><rect x="21" y="13" width="4" height="8"/>
+                <rect x="33" y="3" width="8" height="6"/><rect x="33" y="13" width="8" height="8"/><rect x="3" y="24" width="14" height="3"/>
+                <rect x="21" y="24" width="6" height="3"/><rect x="31" y="24" width="10" height="3"/><rect x="28" y="6" width="4" height="4"/>
+              </g>
+            </g>
+          </g>
+
+          <g class="scene__boxes">
+            <g class="box box--ok">
+              <rect x="112" y="384" width="136" height="96" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+              <rect x="112" y="364" width="74" height="20" rx="3" fill="#D6FF3D"/>
+              <text x="120" y="378" class="svg-label" fill="#0B0D12">PART 99.4%</text>
+              <g fill="#D6FF3D"><circle cx="112" cy="384" r="4"/><circle cx="248" cy="384" r="4"/><circle cx="112" cy="480" r="4"/><circle cx="248" cy="480" r="4"/></g>
+            </g>
+            <g class="box box--nok">
+              <rect x="292" y="384" width="136" height="96" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2"/>
+              <rect x="292" y="364" width="64" height="20" rx="3" fill="#FF4D4F"/>
+              <text x="300" y="378" class="svg-label" fill="#fff">DEFECT</text>
+              <path d="M330 430 L352 408 L374 426 L396 404" stroke="#FF4D4F" stroke-width="2.5" fill="none"/>
+              <g fill="#FF4D4F"><circle cx="292" cy="384" r="4"/><circle cx="428" cy="384" r="4"/><circle cx="292" cy="480" r="4"/><circle cx="428" cy="480" r="4"/></g>
+              <g stroke="#FF4D4F" stroke-dasharray="3 3" opacity=".8">
+                <path d="M300 470h120"/><path d="M300 394v76"/>
+              </g>
+            </g>
+            <g class="box box--code">
+              <rect x="472" y="384" width="136" height="96" rx="4" fill="none" stroke="#5B8CFF" stroke-width="2"/>
+              <rect x="472" y="364" width="96" height="20" rx="3" fill="#5B8CFF"/>
+              <text x="480" y="378" class="svg-label" fill="#fff">DM · OK</text>
+              <text x="480" y="470" class="svg-mono" fill="#8FB4FF">ID 4A7F-92C1</text>
+              <g fill="#5B8CFF"><circle cx="472" cy="384" r="4"/><circle cx="608" cy="384" r="4"/><circle cx="472" cy="480" r="4"/><circle cx="608" cy="480" r="4"/></g>
+            </g>
+            <rect class="scene__scan" x="46" y="384" width="668" height="3" fill="url(#gScan)" filter="url(#fGlow)"/>
+            <g class="scene__measure">
+              <path d="M150 340 L150 372" stroke="#D6FF3D" stroke-width="1.5"/>
+              <path d="M210 340 L210 372" stroke="#D6FF3D" stroke-width="1.5"/>
+              <path d="M150 340 H210" stroke="#D6FF3D" stroke-width="1.5"/>
+              <rect x="158" y="318" width="46" height="20" rx="3" fill="#0B0D12" stroke="#D6FF3D"/>
+              <text x="165" y="332" class="svg-mono" fill="#D6FF3D">62.04</text>
+            </g>
+          </g>
+
+          <g class="scene__panel" transform="translate(48,64)">
+            <rect width="250" height="176" rx="10" fill="#0E1117" fill-opacity=".92" stroke="#2A3140"/>
+            <text x="16" y="26" class="svg-tag" fill="#8892A4">INSPECTION · STATION 04</text>
+            <line x1="16" y1="36" x2="234" y2="36" stroke="#2A3140"/>
+            <g transform="translate(16,50)">
+              <rect width="106" height="52" rx="8" fill="#131A12" stroke="#D6FF3D"/>
+              <text x="14" y="22" class="svg-tag" fill="#9BC43A">STATUS</text>
+              <text x="14" y="42" class="svg-big" fill="#D6FF3D">OK · 2/3</text>
+            </g>
+            <g transform="translate(132,50)">
+              <rect width="102" height="52" rx="8" fill="#1A1113" stroke="#FF4D4F"/>
+              <text x="14" y="22" class="svg-tag" fill="#FF8A8B">NOK · 1</text>
+              <text x="14" y="42" class="svg-big" fill="#FF4D4F">SCRATCH</text>
+            </g>
+            <g>
+              <text x="16" y="128" class="svg-tag" fill="#8892A4">CONFIDENCE</text>
+              <text x="234" y="128" class="svg-mono" fill="#E7EDF7" text-anchor="end">98.6%</text>
+              <text x="16" y="150" class="svg-tag" fill="#8892A4">PROCESSING</text>
+              <text x="234" y="150" class="svg-mono" fill="#E7EDF7" text-anchor="end">74 ms</text>
+              <text x="16" y="172" class="svg-tag" fill="#8892A4">OUTPUT</text>
+              <text x="234" y="172" class="svg-mono" fill="#5B8CFF" text-anchor="end">PLC · DB12</text>
+            </g>
+          </g>
+        </svg>
+
+        <div class="flow" aria-hidden="true">
+          <span class="flow__node">CAMERA</span>
+          <span class="flow__line"><i></i></span>
+          <span class="flow__node flow__node--accent">AI / MV</span>
+          <span class="flow__line"><i></i></span>
+          <span class="flow__node">RESULT</span>
+          <span class="flow__line"><i></i></span>
+          <span class="flow__node">PLC</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ 02 ЗАДАЧИ ============ -->
+<section class="section section--light" id="tasks">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line">ЗАДАЧИ КОНТРОЛЯ</div>
+      <h2 class="h2">Что нужно контролировать?</h2>
+      <p class="section__sub">Подбираем технологию машинного зрения под конкретную производственную задачу.</p>
+    </div>
+
+    <div class="tasks" data-reveal>
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <defs><linearGradient id="mMetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9D2E0"/><stop offset="1" stop-color="#6E788C"/></linearGradient></defs>
+            <rect width="400" height="240" fill="#12151C"/>
+            <rect x="30" y="150" width="340" height="26" rx="4" fill="#2A3140"/>
+            <g fill="url(#mMetal)"><rect x="50" y="96" width="90" height="56" rx="6"/><rect x="160" y="96" width="90" height="56" rx="6"/><rect x="270" y="96" width="90" height="56" rx="6"/></g>
+            <rect x="172" y="106" width="66" height="36" rx="4" fill="#1A1F2A" stroke="#FF4D4F" stroke-width="2" stroke-dasharray="5 4"/>
+            <text x="205" y="94" text-anchor="middle" class="svg-label" fill="#FF4D4F">MISSING</text>
+            <rect x="46" y="92" width="98" height="64" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+            <rect x="266" y="92" width="98" height="64" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+            <text x="46" y="84" class="svg-label" fill="#D6FF3D">OK</text>
+            <text x="266" y="84" class="svg-label" fill="#D6FF3D">OK</text>
+            <rect x="20" y="20" width="130" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="37" class="svg-tag" fill="#8892A4">PRESENCE · 2/3</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">01</div>
+          <h3 class="task-card__title">Наличие / отсутствие</h3>
+          <p class="task-card__text">Проверка комплектации, деталей, крышек, этикеток и компонентов.</p>
+          <div class="task-card__result"><span class="pill pill--ok">OK / NOK</span><span class="pill">PRESENCE</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <rect width="400" height="240" fill="#12151C"/>
+            <rect x="60" y="50" width="280" height="140" rx="8" fill="#8892A4"/>
+            <rect x="60" y="50" width="280" height="40" rx="8" fill="#B6BFCE" opacity=".5"/>
+            <path d="M120 150 L170 96 L215 140 L268 88 L310 130" stroke="#FF4D4F" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="268" cy="88" r="9" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="230" y="62" width="76" height="52" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2"/>
+            <rect x="230" y="44" width="78" height="18" rx="3" fill="#FF4D4F"/>
+            <text x="238" y="58" class="svg-label" fill="#fff">DEFECT 96%</text>
+            <rect x="100" y="120" width="74" height="52" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+            <text x="100" y="114" class="svg-label" fill="#D6FF3D">SURFACE OK</text>
+            <rect x="20" y="20" width="150" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="37" class="svg-tag" fill="#8892A4">DEFECT DETECTION</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">02</div>
+          <h3 class="task-card__title">Дефекты</h3>
+          <p class="task-card__text">Обнаружение царапин, сколов, трещин, загрязнений и других дефектов.</p>
+          <div class="task-card__result"><span class="pill pill--nok">NOK</span><span class="pill">AI VISION</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <rect width="400" height="240" fill="#12151C"/>
+            <rect x="80" y="70" width="240" height="110" rx="8" fill="#E7EDF7"/>
+            <g transform="translate(104,88)" fill="#12151C">
+              <rect width="80" height="80"/><rect x="6" y="6" width="20" height="20" fill="#E7EDF7"/><rect x="12" y="12" width="8" height="8" fill="#12151C"/>
+              <rect x="54" y="6" width="20" height="20" fill="#E7EDF7"/><rect x="60" y="12" width="8" height="8" fill="#12151C"/>
+              <rect x="6" y="54" width="20" height="20" fill="#E7EDF7"/><rect x="12" y="60" width="8" height="8" fill="#12151C"/>
+              <rect x="34" y="6" width="8" height="8"/><rect x="44" y="16" width="8" height="8"/><rect x="34" y="26" width="8" height="8"/>
+              <rect x="6" y="34" width="8" height="8"/><rect x="16" y="44" width="8" height="8"/><rect x="34" y="34" width="8" height="8"/>
+              <rect x="44" y="44" width="8" height="8"/><rect x="54" y="34" width="8" height="8"/><rect x="64" y="44" width="8" height="8"/>
+              <rect x="34" y="54" width="8" height="8"/><rect x="48" y="62" width="8" height="8"/><rect x="64" y="54" width="10" height="10"/>
+              <rect x="34" y="70" width="8" height="6"/><rect x="54" y="72" width="6" height="4"/>
+            </g>
+            <text x="204" y="112" class="svg-mono" fill="#12151C">DataMatrix</text>
+            <text x="204" y="136" class="svg-mono" fill="#12151C">4A7F-92C1</text>
+            <text x="204" y="160" class="svg-mono" fill="#1E5EFF">verified</text>
+            <rect x="76" y="66" width="248" height="118" rx="8" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+            <rect x="76" y="44" width="136" height="20" rx="3" fill="#D6FF3D"/>
+            <text x="84" y="59" class="svg-label" fill="#0B0D12">DECODE OK · 12ms</text>
+            <rect x="20" y="20" width="150" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="37" class="svg-tag" fill="#8892A4">MARKING / OCR</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">03</div>
+          <h3 class="task-card__title">Маркировка</h3>
+          <p class="task-card__text">Чтение и проверка QR, DataMatrix, штрихкодов и текста.</p>
+          <div class="task-card__result"><span class="pill pill--ok">DECODED</span><span class="pill">OCR · DM · QR</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <defs><linearGradient id="mMetal2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#C9D2E0"/><stop offset="1" stop-color="#6E788C"/></linearGradient></defs>
+            <rect width="400" height="240" fill="#12151C"/>
+            <rect x="70" y="80" width="260" height="90" rx="6" fill="url(#mMetal2)"/>
+            <g stroke="#D6FF3D" stroke-width="1.5">
+              <path d="M70 50h260"/><path d="M70 44v12"/><path d="M330 44v12"/>
+              <path d="M70 196h260"/><path d="M70 190v12"/><path d="M330 190v12"/>
+              <path d="M46 80v90"/><path d="M40 80h12"/><path d="M40 170h12"/>
+            </g>
+            <rect x="164" y="36" width="72" height="24" rx="4" fill="#0B0D12" stroke="#D6FF3D"/>
+            <text x="200" y="53" text-anchor="middle" class="svg-mono" fill="#D6FF3D">260.02</text>
+            <rect x="8" y="106" width="76" height="24" rx="4" fill="#0B0D12" stroke="#D6FF3D"/>
+            <text x="46" y="123" text-anchor="middle" class="svg-mono" fill="#D6FF3D">90.00</text>
+            <g fill="#D6FF3D"><circle cx="70" cy="80" r="5"/><circle cx="330" cy="80" r="5"/><circle cx="70" cy="170" r="5"/><circle cx="330" cy="170" r="5"/></g>
+            <rect x="248" y="140" width="98" height="24" rx="4" fill="#131A12" stroke="#D6FF3D"/>
+            <text x="258" y="157" class="svg-label" fill="#D6FF3D">IN TOLERANCE</text>
+            <rect x="20" y="20" width="170" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="37" class="svg-tag" fill="#8892A4">MEASUREMENT · ±0.05</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">04</div>
+          <h3 class="task-card__title">Измерения</h3>
+          <p class="task-card__text">Контроль геометрии, размеров, положения и допусков.</p>
+          <div class="task-card__result"><span class="pill pill--ok">IN TOL.</span><span class="pill">±0.05 mm</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <rect width="400" height="240" fill="#12151C"/>
+            <rect x="30" y="170" width="340" height="24" rx="4" fill="#2A3140"/>
+            <g fill="#8892A4"><rect x="50" y="120" width="46" height="50" rx="4"/><rect x="110" y="120" width="46" height="50" rx="4"/><rect x="170" y="120" width="46" height="50" rx="4"/><rect x="230" y="120" width="46" height="50" rx="4"/><rect x="290" y="120" width="46" height="50" rx="4"/></g>
+            <g class="vis-num" font-family="monospace" font-size="16" font-weight="700" fill="#D6FF3D" text-anchor="middle">
+              <text x="73" y="152">1</text><text x="133" y="152">2</text><text x="193" y="152">3</text><text x="253" y="152">4</text><text x="313" y="152">5</text>
+            </g>
+            <g fill="none" stroke="#D6FF3D" stroke-width="2">
+              <rect x="46" y="116" width="54" height="58" rx="4"/><rect x="106" y="116" width="54" height="58" rx="4"/><rect x="166" y="116" width="54" height="58" rx="4"/><rect x="226" y="116" width="54" height="58" rx="4"/><rect x="286" y="116" width="54" height="58" rx="4"/>
+            </g>
+            <g transform="translate(130,30)">
+              <rect width="140" height="56" rx="8" fill="#0B0D12" stroke="#D6FF3D"/>
+              <text x="16" y="24" class="svg-tag" fill="#8892A4">COUNT</text>
+              <text x="16" y="46" class="svg-big2" fill="#D6FF3D">5 pcs</text>
+              <text x="124" y="46" class="svg-tag" fill="#8892A4" text-anchor="end">42/min</text>
+            </g>
+            <rect x="20" y="210" width="180" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="227" class="svg-tag" fill="#8892A4">COUNTING · LINE 02</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">05</div>
+          <h3 class="task-card__title">Подсчёт</h3>
+          <p class="task-card__text">Автоматический подсчёт продукции и компонентов на линии.</p>
+          <div class="task-card__result"><span class="pill pill--ok">COUNT OK</span><span class="pill">REAL-TIME</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <a href="#contact" class="task-card">
+        <div class="task-card__media">
+          <svg viewBox="0 0 400 240" class="vis" aria-hidden="true">
+            <rect width="400" height="240" fill="#12151C"/>
+            <g transform="translate(90,60)">
+              <circle cx="50" cy="34" r="26" fill="#B6BFCE"/>
+              <path d="M24 30a26 26 0 0 1 52 0z" fill="#F2C94C"/>
+              <rect x="14" y="66" width="72" height="86" rx="14" fill="#5B8CFF"/>
+              <rect x="0" y="70" width="18" height="70" rx="9" fill="#B6BFCE"/>
+              <rect x="82" y="70" width="18" height="70" rx="9" fill="#B6BFCE"/>
+            </g>
+            <rect x="76" y="44" width="140" height="126" rx="6" fill="none" stroke="#D6FF3D" stroke-width="2"/>
+            <rect x="76" y="24" width="140" height="20" rx="3" fill="#D6FF3D"/>
+            <text x="84" y="39" class="svg-label" fill="#0B0D12">PPE OK · HELMET</text>
+            <g>
+              <path d="M250 60 L350 60 L370 190 L230 190 Z" fill="#FF4D4F" fill-opacity=".12" stroke="#FF4D4F" stroke-dasharray="8 6"/>
+              <text x="258" y="84" class="svg-label" fill="#FF4D4F">DANGER ZONE</text>
+              <circle cx="300" cy="140" r="26" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <path d="M282 122 L318 158 M318 122 L282 158" stroke="#FF4D4F" stroke-width="4"/>
+            </g>
+            <rect x="20" y="210" width="200" height="24" rx="4" fill="#0B0D12" stroke="#2A3140"/>
+            <text x="32" y="227" class="svg-tag" fill="#8892A4">SAFETY · PPE + ZONE</text>
+          </svg>
+        </div>
+        <div class="task-card__body">
+          <div class="task-card__num">06</div>
+          <h3 class="task-card__title">Безопасность</h3>
+          <p class="task-card__text">Контроль СИЗ, опасных зон и действий персонала.</p>
+          <div class="task-card__result"><span class="pill pill--nok">ALARM</span><span class="pill">PPE · ZONES</span></div>
+        </div>
+        <span class="task-card__arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 DEMO ============ -->
+<section class="section section--dark" id="demo">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line label--on-dark">DEMO · КАК СИСТЕМА ВИДИТ ЛИНИЮ</div>
+      <h2 class="h2 h2--light">Посмотрите, как система видит производственный процесс</h2>
+      <p class="section__sub section__sub--light">Перетащите ползунок: слева — исходный кадр камеры, справа — результат обработки системой машинного зрения.</p>
+    </div>
+
+    <div class="demo" data-reveal>
+      <div class="demo__screen" id="demoScreen">
+        <div class="demo__layer demo__layer--base">
+          <svg viewBox="0 0 1000 560" class="demo__svg" aria-label="Исходное изображение линии">
+            <defs>
+              <linearGradient id="dRaw" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B3140"/><stop offset="1" stop-color="#171B24"/></linearGradient>
+              <linearGradient id="dMetal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#AAB4C4"/><stop offset="1" stop-color="#5E6779"/></linearGradient>
+            </defs>
+            <rect width="1000" height="560" fill="url(#dRaw)"/>
+            <g stroke="#fff" stroke-opacity=".04"><path d="M0 140h1000M0 280h1000M0 420h1000M250 0v560M500 0v560M750 0v560"/></g>
+            <rect x="40" y="60" width="920" height="40" fill="#3A4252"/>
+            <rect x="80" y="100" width="24" height="120" fill="#333B4B"/>
+            <rect x="896" y="100" width="24" height="120" fill="#333B4B"/>
+            <rect x="460" y="100" width="80" height="70" rx="8" fill="#2B3140" stroke="#4A5466"/>
+            <circle cx="500" cy="150" r="20" fill="#0B0E13" stroke="#6E788C" stroke-width="3"/>
+            <circle cx="494" cy="144" r="6" fill="#5B8CFF" opacity=".7"/>
+            <rect x="60" y="360" width="880" height="20" fill="#4A5466"/>
+            <rect x="60" y="380" width="880" height="70" fill="#232A36"/>
+            <g fill="#4A5466"><circle cx="140" cy="415" r="18"/><circle cx="300" cy="415" r="18"/><circle cx="460" cy="415" r="18"/><circle cx="620" cy="415" r="18"/><circle cx="780" cy="415" r="18"/><circle cx="900" cy="415" r="18"/></g>
+            <g stroke="#6E788C" stroke-opacity=".3" stroke-width="4"><path d="M90 415h40M190 415h60M350 415h60M510 415h60M670 415h60M830 415h40"/></g>
+            <rect x="60" y="450" width="880" height="14" fill="#171B24"/>
+            <g fill="url(#dMetal)">
+              <g transform="translate(100,270)"><rect width="140" height="90" rx="10"/><rect x="46" y="30" width="48" height="36" rx="6" fill="#39414F"/></g>
+              <g transform="translate(300,270)"><rect width="140" height="90" rx="10"/><path d="M20 70 L60 24 L92 62 L124 20" stroke="#6E788C" stroke-width="6" fill="none"/></g>
+              <g transform="translate(500,270)"><rect width="140" height="90" rx="10"/><g transform="translate(40,26)" fill="#1B202A"><rect width="60" height="40" fill="#E7EDF7"/><rect x="4" y="4" width="12" height="12" fill="#1B202A"/><rect x="44" y="4" width="12" height="12" fill="#1B202A"/><rect x="4" y="24" width="12" height="12" fill="#1B202A"/><rect x="22" y="4" width="6" height="6"/><rect x="30" y="14" width="6" height="6"/><rect x="22" y="24" width="6" height="6"/><rect x="36" y="30" width="8" height="6"/><rect x="48" y="22" width="8" height="14"/></g></g>
+              <g transform="translate(700,270)"><rect width="140" height="90" rx="10"/><rect x="40" y="34" width="60" height="30" rx="4" fill="#39414F"/></g>
+            </g>
+            <ellipse cx="500" cy="300" rx="360" ry="120" fill="#fff" opacity=".03"/>
+            <rect x="24" y="24" width="220" height="28" rx="4" fill="#0B0D12" fill-opacity=".7"/>
+            <text x="40" y="44" class="svg-tag" fill="#95A0B5">RAW FRAME · CAM-01 · 1920×1080</text>
+          </svg>
+        </div>
+
+        <div class="demo__layer demo__layer--ai" id="demoAi">
+          <svg viewBox="0 0 1000 560" class="demo__svg" aria-label="Результат обработки машинным зрением">
+            <defs>
+              <linearGradient id="dAi" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0D1420"/><stop offset="1" stop-color="#0A0F16"/></linearGradient>
+              <linearGradient id="gScan2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D6FF3D" stop-opacity="0"/><stop offset=".5" stop-color="#D6FF3D" stop-opacity=".8"/><stop offset="1" stop-color="#D6FF3D" stop-opacity="0"/></linearGradient>
+            </defs>
+            <rect width="1000" height="560" fill="url(#dAi)"/>
+            <g stroke="#5B8CFF" stroke-opacity=".06"><path d="M0 140h1000M0 280h1000M0 420h1000M250 0v560M500 0v560M750 0v560"/></g>
+            <rect x="60" y="360" width="880" height="20" fill="#171F2E"/>
+            <rect x="60" y="380" width="880" height="70" fill="#111722"/>
+            <g fill="#1B2433"><circle cx="140" cy="415" r="18"/><circle cx="300" cy="415" r="18"/><circle cx="460" cy="415" r="18"/><circle cx="620" cy="415" r="18"/><circle cx="780" cy="415" r="18"/><circle cx="900" cy="415" r="18"/></g>
+            <rect x="460" y="100" width="80" height="70" rx="8" fill="#151C28" stroke="#2F3A4D"/>
+            <circle cx="500" cy="150" r="20" fill="#070A0F" stroke="#3A475C" stroke-width="3"/>
+            <path d="M482 170 L360 360 L640 360 L518 170 Z" fill="#5B8CFF" fill-opacity=".07" stroke="#5B8CFF" stroke-opacity=".3" stroke-dasharray="6 8"/>
+            <g fill="#1A2333">
+              <g transform="translate(100,270)"><rect width="140" height="90" rx="10"/></g>
+              <g transform="translate(300,270)"><rect width="140" height="90" rx="10"/></g>
+              <g transform="translate(500,270)"><rect width="140" height="90" rx="10"/></g>
+              <g transform="translate(700,270)"><rect width="140" height="90" rx="10"/></g>
+            </g>
+            <g stroke="#5B8CFF" stroke-opacity=".5" fill="#5B8CFF" fill-opacity=".05" stroke-dasharray="10 8">
+              <rect x="76" y="248" width="190" height="134" rx="6"/>
+              <rect x="276" y="248" width="190" height="134" rx="6"/>
+              <rect x="476" y="248" width="190" height="134" rx="6"/>
+              <rect x="676" y="248" width="190" height="134" rx="6"/>
+            </g>
+            <g>
+              <rect x="96" y="264" width="148" height="102" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+              <rect x="96" y="240" width="92" height="22" rx="3" fill="#D6FF3D"/>
+              <text x="106" y="256" class="svg-label" fill="#0B0D12">OK · 99.1%</text>
+              <g fill="#D6FF3D"><circle cx="96" cy="264" r="4"/><circle cx="244" cy="264" r="4"/><circle cx="96" cy="366" r="4"/><circle cx="244" cy="366" r="4"/></g>
+            </g>
+            <g>
+              <rect x="296" y="264" width="148" height="102" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+              <rect x="296" y="240" width="112" height="22" rx="3" fill="#FF4D4F"/>
+              <text x="306" y="256" class="svg-label" fill="#fff">NOK · SCRATCH</text>
+              <path d="M320 340 L360 292 L392 330 L430 286" stroke="#FF4D4F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <circle cx="430" cy="286" r="8" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="330" y="374" width="126" height="22" rx="3" fill="#0B0D12" stroke="#FF4D4F"/>
+              <text x="340" y="390" class="svg-mono" fill="#FF4D4F">len 18.4 mm</text>
+            </g>
+            <g>
+              <rect x="496" y="264" width="148" height="102" rx="4" fill="none" stroke="#5B8CFF" stroke-width="2.5"/>
+              <rect x="496" y="240" width="84" height="22" rx="3" fill="#5B8CFF"/>
+              <text x="506" y="256" class="svg-label" fill="#fff">DM · READ</text>
+              <path d="M516 284h108M516 346h108" stroke="#5B8CFF" stroke-dasharray="4 4"/>
+              <text x="516" y="368" class="svg-mono" fill="#8FB4FF">4A7F-92C1-04</text>
+            </g>
+            <g>
+              <rect x="696" y="264" width="148" height="102" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+              <rect x="696" y="240" width="96" height="22" rx="3" fill="#D6FF3D"/>
+              <text x="706" y="256" class="svg-label" fill="#0B0D12">MEASURE</text>
+              <g stroke="#D6FF3D" stroke-width="1.5"><path d="M714 300h112"/><path d="M714 294v12"/><path d="M826 294v12"/><path d="M760 316v34"/><path d="M760 316h60"/><path d="M820 316v34"/></g>
+              <rect x="766" y="324" width="54" height="22" rx="3" fill="#0B0D12" stroke="#D6FF3D"/>
+              <text x="774" y="340" class="svg-mono" fill="#D6FF3D">60.01</text>
+              <text x="714" y="368" class="svg-mono" fill="#D6FF3D">PASS</text>
+            </g>
+            <g transform="translate(24,24)">
+              <rect width="300" height="92" rx="8" fill="#070A0F" fill-opacity=".9" stroke="#232C3C"/>
+              <text x="16" y="26" class="svg-tag" fill="#7E8CA5">AI VISION · INFERENCE</text>
+              <line x1="16" y1="36" x2="284" y2="36" stroke="#232C3C"/>
+              <text x="16" y="60" class="svg-tag" fill="#7E8CA5">CONFIDENCE</text>
+              <text x="284" y="60" class="svg-mono" fill="#E7EDF7" text-anchor="end">98.6%</text>
+              <text x="16" y="82" class="svg-tag" fill="#7E8CA5">PROCESSING</text>
+              <text x="284" y="82" class="svg-mono" fill="#D6FF3D" text-anchor="end">74 ms</text>
+            </g>
+            <g transform="translate(676,24)">
+              <rect width="300" height="92" rx="8" fill="#070A0F" fill-opacity=".9" stroke="#232C3C"/>
+              <text x="16" y="26" class="svg-tag" fill="#7E8CA5">RESULT → PLC</text>
+              <line x1="16" y1="36" x2="284" y2="36" stroke="#232C3C"/>
+              <rect x="16" y="46" width="84" height="32" rx="6" fill="#131A12" stroke="#D6FF3D"/>
+              <text x="58" y="68" text-anchor="middle" class="svg-label" fill="#D6FF3D">OK ×2</text>
+              <rect x="110" y="46" width="84" height="32" rx="6" fill="#1A1113" stroke="#FF4D4F"/>
+              <text x="152" y="68" text-anchor="middle" class="svg-label" fill="#FF4D4F">NOK ×1</text>
+              <text x="284" y="68" text-anchor="end" class="svg-mono" fill="#5B8CFF">DB12.4</text>
+            </g>
+            <rect class="demo__scan" x="0" y="0" width="1000" height="4" fill="url(#gScan2)"/>
+          </svg>
+        </div>
+
+        <div class="demo__divider" id="demoDivider" style="left:50%">
+          <button class="demo__handle" id="demoHandle" aria-label="Сравнить до и после">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-5 6 5 6M15 6l5 6-5 6"/></svg>
+          </button>
+        </div>
+
+        <div class="demo__badge demo__badge--l">RAW</div>
+        <div class="demo__badge demo__badge--r">AI VISION</div>
+      </div>
+
+      <div class="demo__metrics">
+        <div class="metric"><span class="metric__k">Objects</span><span class="metric__v">4</span></div>
+        <div class="metric"><span class="metric__k">Confidence</span><span class="metric__v">98.6%</span></div>
+        <div class="metric"><span class="metric__k">Processing</span><span class="metric__v">74 ms</span></div>
+        <div class="metric"><span class="metric__k">Decision</span><span class="metric__v metric__v--nok">1 NOK</span></div>
+        <div class="metric"><span class="metric__k">Output</span><span class="metric__v metric__v--blue">PLC</span></div>
+      </div>
+
+      <div class="chain">
+        <div class="chain__step"><span class="chain__n">01</span><b>Камера</b><span>съёмка кадра</span></div>
+        <span class="chain__arrow" aria-hidden="true">→</span>
+        <div class="chain__step"><span class="chain__n">02</span><b>Обработка изображения</b><span>ROI, фильтры, калибровка</span></div>
+        <span class="chain__arrow" aria-hidden="true">→</span>
+        <div class="chain__step"><span class="chain__n">03</span><b>AI / Machine Vision</b><span>анализ и классификация</span></div>
+        <span class="chain__arrow" aria-hidden="true">→</span>
+        <div class="chain__step"><span class="chain__n">04</span><b>Результат</b><span>OK / NOK, измерения</span></div>
+        <span class="chain__arrow" aria-hidden="true">→</span>
+        <div class="chain__step chain__step--accent"><span class="chain__n">05</span><b>PLC / SCADA / MES</b><span>сигнал в производство</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ 04 TECHNOLOGY ============ -->
+<section class="section section--light" id="tech">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line">ТЕХНОЛОГИИ</div>
+      <h2 class="h2">Какая технология подходит для вашей задачи?</h2>
+      <p class="section__sub">Машинное зрение и AI Vision дополняют друг друга. Выбор зависит от задачи, а не от моды.</p>
+    </div>
+
+    <div class="tech" data-reveal>
+      <article class="tech-card">
+        <div class="tech-card__top">
+          <span class="tech-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="26" height="18" rx="3"/><path d="M3 13h26M11 7v6M21 7v6"/><circle cx="16" cy="20" r="3"/></svg>
+          </span>
+          <h3>MACHINE VISION</h3>
+        </div>
+        <p class="tech-card__lead">Детерминированный контроль: чёткие правила, высокая повторяемость, измерения и коды.</p>
+        <div class="tech-card__label">Подходит для</div>
+        <ul class="tech-list">
+          <li>наличия</li><li>подсчёта</li><li>измерений</li><li>геометрии</li>
+          <li>положения</li><li>маркировки</li><li>OCR</li><li>QR / DataMatrix / штрихкодов</li>
+        </ul>
+        <div class="tech-card__foot"><span class="pill pill--dark">Rule-based</span><span class="pill pill--dark">Высокая скорость</span></div>
+      </article>
+
+      <div class="tech-versus" aria-hidden="true">
+        <span>VS</span>
+        <p>подбираем<br>под задачу</p>
+      </div>
+
+      <article class="tech-card tech-card--accent">
+        <div class="tech-card__top">
+          <span class="tech-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="16" cy="16" r="11"/><path d="M16 5v22M5 16h22"/><circle cx="16" cy="16" r="4"/></svg>
+          </span>
+          <h3>AI VISION</h3>
+        </div>
+        <p class="tech-card__lead">Обучение на реальных данных: вариативность продукции, текстуры, сложные дефекты.</p>
+        <div class="tech-card__label">Подходит для</div>
+        <ul class="tech-list">
+          <li>сложных дефектов</li><li>различных текстур</li><li>нестабильного освещения</li><li>классификации</li>
+          <li>контроля СИЗ</li><li>трекинга</li><li>распознавания событий</li>
+        </ul>
+        <div class="tech-card__foot"><span class="pill pill--dark">Data-driven</span><span class="pill pill--dark">Дообучение</span></div>
+      </article>
+    </div>
+
+    <div class="dflow" data-reveal>
+      <div class="dflow__step"><span>ВАША ЗАДАЧА</span></div>
+      <div class="dflow__down" aria-hidden="true">↓</div>
+      <div class="dflow__split">
+        <div class="dflow__pill">MACHINE VISION</div>
+        <div class="dflow__or">или</div>
+        <div class="dflow__pill dflow__pill--accent">AI VISION</div>
+      </div>
+      <div class="dflow__down" aria-hidden="true">↓</div>
+      <div class="dflow__step dflow__step--strong"><span>СИСТЕМА КОНТРОЛЯ</span></div>
+      <div class="dflow__down" aria-hidden="true">↓</div>
+      <div class="dflow__step dflow__step--io"><span>PLC / SCADA / MES</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 РЕШЕНИЯ ============ -->
+<section class="section section--graphite" id="solutions">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line label--on-dark">РЕШЕНИЯ</div>
+      <h2 class="h2 h2--light">Решения для автоматизации контроля</h2>
+      <p class="section__sub section__sub--light">Каждое решение строится по логике: задача → решение → результат.</p>
+    </div>
+
+    <div class="solutions" data-reveal>
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <path d="M60 210 L110 140 L220 110 L340 110 L450 150 L500 210 Z" fill="#1C222D" stroke="#39414F" stroke-width="2"/>
+            <path d="M130 140 L230 120 L330 120 L420 152" fill="none" stroke="#5B8CFF" stroke-width="2" stroke-dasharray="6 6"/>
+            <g stroke="#D6FF3D" stroke-width="2" fill="none"><path d="M110 140 L220 110"/><path d="M340 110 L450 150"/></g>
+            <g fill="#D6FF3D"><circle cx="110" cy="140" r="6"/><circle cx="220" cy="110" r="6"/><circle cx="340" cy="110" r="6"/><circle cx="450" cy="150" r="6"/></g>
+            <g stroke="#5B8CFF" stroke-width="1.5" stroke-dasharray="4 4"><path d="M60 210h440"/><path d="M60 204v12"/><path d="M500 204v12"/></g>
+            <rect x="196" y="222" width="168" height="26" rx="4" fill="#0B0D12" stroke="#5B8CFF"/>
+            <text x="280" y="240" text-anchor="middle" class="svg-mono" fill="#8FB4FF">WHEELBASE OK</text>
+            <g stroke="#6E788C" stroke-width="8" fill="none" stroke-linecap="round"><path d="M500 90 L470 40 L420 60"/></g>
+            <circle cx="500" cy="90" r="12" fill="#39414F"/><circle cx="470" cy="40" r="10" fill="#39414F"/>
+            <rect x="20" y="20" width="230" height="26" rx="4" fill="#0B0D12" fill-opacity=".8"/>
+            <text x="32" y="38" class="svg-tag" fill="#8892A4">BODY GEOMETRY · ROBOT CELL</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Геометрия кузова и положение элементов на линии</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Контроль геометрии кузова и положения элементов с помощью камер и роботизированных систем.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Автоматический контроль в реальном времени + сигнал в PLC</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <rect x="40" y="70" width="480" height="160" rx="6" fill="#2A3140"/>
+            <rect x="40" y="70" width="480" height="26" fill="#39414F"/>
+            <rect x="70" y="120" width="420" height="80" rx="4" fill="#6E788C"/>
+            <path d="M110 170 L160 140 L210 168" stroke="#FF4D4F" stroke-width="4" fill="none"/>
+            <path d="M330 150 L370 176" stroke="#FF4D4F" stroke-width="4" fill="none"/>
+            <rect x="96" y="126" width="130" height="60" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="96" y="104" width="94" height="20" rx="3" fill="#FF4D4F"/>
+            <text x="106" y="119" class="svg-label" fill="#fff">CRACK 97%</text>
+            <rect x="310" y="132" width="96" height="56" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+            <rect x="310" y="112" width="82" height="20" rx="3" fill="#D6FF3D"/>
+            <text x="320" y="127" class="svg-label" fill="#0B0D12">SURFACE OK</text>
+            <g transform="translate(60,34)"><rect width="440" height="22" rx="4" fill="#1C222D" stroke="#39414F"/><g fill="#5B8CFF"><circle cx="40" cy="11" r="4"/><circle cx="140" cy="11" r="4"/><circle cx="240" cy="11" r="4"/><circle cx="340" cy="11" r="4"/><circle cx="400" cy="11" r="4"/></g></g>
+            <rect x="20" y="250" width="270" height="26" rx="4" fill="#0B0D12"/>
+            <text x="32" y="268" class="svg-tag" fill="#8892A4">SURFACE INSPECTION · HOT LINE</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Дефекты поверхности металла на производственной линии</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Обнаружение дефектов поверхности и контроль продукции на производственной линии.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Автоматическое определение NOK и отсев на линии</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <rect x="30" y="210" width="500" height="24" fill="#2A3140"/>
+            <g transform="translate(60,110)">
+              <rect width="140" height="100" rx="8" fill="#E7EDF7"/>
+              <g fill="#B6BFCE"><rect x="14" y="14" width="34" height="34" rx="4"/><rect x="54" y="14" width="34" height="34" rx="4"/><rect x="94" y="14" width="34" height="34" rx="4"/><rect x="14" y="56" width="34" height="34" rx="4"/><rect x="54" y="56" width="34" height="34" rx="4"/><rect x="94" y="56" width="34" height="34" rx="4"/></g>
+              <rect x="54" y="14" width="34" height="34" rx="4" fill="#FF4D4F" fill-opacity=".25" stroke="#FF4D4F" stroke-width="3"/>
+            </g>
+            <g transform="translate(220,110)">
+              <rect width="140" height="100" rx="8" fill="#E7EDF7"/>
+              <g fill="#B6BFCE"><rect x="14" y="14" width="34" height="34" rx="4"/><rect x="54" y="14" width="34" height="34" rx="4"/><rect x="94" y="14" width="34" height="34" rx="4"/><rect x="14" y="56" width="34" height="34" rx="4"/><rect x="54" y="56" width="34" height="34" rx="4"/><rect x="94" y="56" width="34" height="34" rx="4"/></g>
+            </g>
+            <g transform="translate(380,110)">
+              <rect width="140" height="100" rx="8" fill="#E7EDF7"/>
+              <rect x="20" y="20" width="100" height="60" rx="4" fill="#12151C"/>
+              <g fill="#E7EDF7"><rect x="28" y="28" width="16" height="16"/><rect x="96" y="28" width="16" height="16"/><rect x="28" y="56" width="16" height="16"/><rect x="52" y="30" width="8" height="8"/><rect x="66" y="42" width="8" height="8"/><rect x="52" y="56" width="8" height="8"/><rect x="80" y="64" width="10" height="8"/></g>
+            </g>
+            <rect x="56" y="106" width="148" height="108" rx="6" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="56" y="86" width="150" height="20" rx="3" fill="#FF4D4F"/>
+            <text x="66" y="101" class="svg-label" fill="#fff">NOK · 1 CELL EMPTY</text>
+            <rect x="216" y="106" width="148" height="108" rx="6" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+            <rect x="376" y="106" width="148" height="108" rx="6" fill="none" stroke="#5B8CFF" stroke-width="2.5"/>
+            <rect x="376" y="86" width="96" height="20" rx="3" fill="#5B8CFF"/>
+            <text x="386" y="101" class="svg-label" fill="#fff">LOT · READ</text>
+            <rect x="20" y="250" width="300" height="26" rx="4" fill="#0B0D12"/>
+            <text x="32" y="268" class="svg-tag" fill="#8892A4">PACKAGING · COUNT + CODE + LOT</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Контроль упаковки, маркировки и количества продукции</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Контроль упаковки, маркировки и количества продукции.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Полный контроль комплектности партии на линии</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <rect x="30" y="200" width="500" height="26" fill="#2A3140"/>
+            <g fill="#8892A4">
+              <g transform="translate(70,120)"><path d="M0 80 L0 20 L60 0 L120 20 L120 80 Z" fill="#C9D2E0"/></g>
+              <g transform="translate(220,120)"><path d="M0 80 L0 20 L60 0 L120 20 L120 80 Z" fill="#C9D2E0"/></g>
+              <g transform="translate(370,120)"><path d="M0 80 L0 20 L60 0 L120 20 L120 80 Z" fill="#39414F"/></g>
+            </g>
+            <g transform="translate(78,146)"><rect width="104" height="40" rx="3" fill="#1C222D"/><rect x="10" y="10" width="84" height="6" fill="#5B8CFF"/><rect x="10" y="24" width="60" height="6" fill="#39414F"/></g>
+            <g transform="translate(228,146)"><rect width="104" height="40" rx="3" fill="#1C222D"/><rect x="10" y="10" width="84" height="6" fill="#5B8CFF"/><rect x="10" y="24" width="60" height="6" fill="#39414F"/></g>
+            <rect x="66" y="116" width="128" height="112" rx="6" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+            <rect x="216" y="116" width="128" height="112" rx="6" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+            <rect x="366" y="116" width="128" height="112" rx="6" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="366" y="94" width="114" height="20" rx="3" fill="#FF4D4F"/>
+            <text x="376" y="109" class="svg-label" fill="#fff">NO PRODUCT</text>
+            <rect x="66" y="94" width="70" height="20" rx="3" fill="#D6FF3D"/>
+            <text x="76" y="109" class="svg-label" fill="#0B0D12">OK · 2</text>
+            <rect x="20" y="250" width="260" height="26" rx="4" fill="#0B0D12"/>
+            <text x="32" y="268" class="svg-tag" fill="#8892A4">FOOD LINE · PRESENCE</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Наличие продукта, упаковки и маркировки на скоростной линии</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Контроль наличия продукта, упаковки и маркировки.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Сигнал OK / NOK в PLC на каждый пакет</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <rect x="60" y="70" width="440" height="170" rx="8" fill="#1E4D3A"/>
+            <g stroke="#2E7A5A" stroke-width="2" fill="none"><path d="M60 120h120v50h100v-70h140M180 240v-70h80v-40"/></g>
+            <g fill="#0D1117"><rect x="90" y="90" width="70" height="50" rx="4"/><rect x="200" y="90" width="50" height="40" rx="3"/><rect x="300" y="150" width="90" height="60" rx="4"/><rect x="420" y="90" width="50" height="50" rx="3"/></g>
+            <g fill="#C9D2E0"><rect x="96" y="96" width="58" height="38" rx="3"/><rect x="206" y="96" width="38" height="28" rx="2"/><rect x="426" y="96" width="38" height="38" rx="2"/></g>
+            <g transform="translate(316,160)" fill="#0D1117"><rect width="58" height="40" fill="#E7EDF7"/><rect x="4" y="4" width="12" height="12" fill="#0D1117"/><rect x="42" y="4" width="12" height="12" fill="#0D1117"/><rect x="4" y="24" width="12" height="12" fill="#0D1117"/><rect x="22" y="6" width="6" height="6"/><rect x="32" y="14" width="6" height="6"/><rect x="22" y="24" width="6" height="6"/><rect x="36" y="28" width="8" height="8"/><rect x="48" y="22" width="6" height="14"/></g>
+            <rect x="310" y="154" width="70" height="52" rx="4" fill="none" stroke="#5B8CFF" stroke-width="2.5"/>
+            <rect x="310" y="134" width="84" height="20" rx="3" fill="#5B8CFF"/>
+            <text x="318" y="149" class="svg-label" fill="#fff">DM · OK</text>
+            <rect x="86" y="86" width="78" height="58" rx="4" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+            <rect x="86" y="66" width="76" height="20" rx="3" fill="#D6FF3D"/>
+            <text x="96" y="81" class="svg-label" fill="#0B0D12">IC · POS</text>
+            <rect x="416" y="86" width="70" height="66" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="416" y="66" width="90" height="20" rx="3" fill="#FF4D4F"/>
+            <text x="426" y="81" class="svg-label" fill="#fff">SOLDER NOK</text>
+            <rect x="20" y="256" width="290" height="26" rx="4" fill="#0B0D12"/>
+            <text x="32" y="274" class="svg-tag" fill="#8892A4">ELECTRONICS · COMPONENTS + DM</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Контроль компонентов и DataMatrix на платах</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Контроль компонентов и DataMatrix на платах.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Прослеживаемость каждой платы по коду</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="sol-card">
+        <div class="sol-card__media">
+          <svg viewBox="0 0 560 300" aria-hidden="true">
+            <rect width="560" height="300" fill="#0D1117"/>
+            <rect x="40" y="60" width="480" height="180" fill="#1C222D"/>
+            <g stroke="#39414F" stroke-width="2"><path d="M40 90h480M40 120h480M40 150h480M40 180h480M40 210h480"/></g>
+            <g stroke="#5B8CFF" stroke-opacity=".35" stroke-width="2" stroke-dasharray="10 8"><path d="M40 60h480v180H40z" fill="none"/></g>
+            <g fill="#2E7A5A"><rect x="70" y="80" width="40" height="30"/><rect x="150" y="80" width="40" height="30"/><rect x="230" y="80" width="40" height="30"/><rect x="310" y="80" width="40" height="30"/><rect x="390" y="80" width="40" height="30"/><rect x="110" y="130" width="40" height="30"/><rect x="190" y="130" width="40" height="30"/><rect x="270" y="130" width="40" height="30"/><rect x="350" y="130" width="40" height="30"/><rect x="430" y="130" width="40" height="30"/><rect x="70" y="180" width="40" height="30"/><rect x="150" y="180" width="40" height="30"/><rect x="230" y="180" width="40" height="30"/><rect x="310" y="180" width="40" height="30"/><rect x="390" y="180" width="40" height="30"/></g>
+            <path d="M260 96 C280 130, 300 130, 320 170" stroke="#FF4D4F" stroke-width="5" fill="none"/>
+            <rect x="244" y="84" width="110" height="96" rx="4" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="244" y="64" width="92" height="20" rx="3" fill="#FF4D4F"/>
+            <text x="254" y="79" class="svg-label" fill="#fff">TEAR · NOK</text>
+            <g stroke="#D6FF3D" stroke-width="1.5" stroke-dasharray="4 4"><path d="M70 76v-16M150 76v-16M70 64h80"/></g>
+            <text x="76" y="58" class="svg-mono" fill="#D6FF3D">80 mm</text>
+            <rect x="20" y="256" width="270" height="26" rx="4" fill="#0B0D12"/>
+            <text x="32" y="274" class="svg-tag" fill="#8892A4">TEXTILE · DEFECT ON FLY</text>
+          </svg>
+        </div>
+        <div class="sol-card__body">
+          <div class="sol-flow">
+            <div class="sol-flow__row"><span class="sol-flow__k">ЗАДАЧА</span><p>Дефекты ткани в процессе производства</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row"><span class="sol-flow__k">РЕШЕНИЕ</span><p>Обнаружение дефектов ткани в процессе производства.</p></div>
+            <div class="sol-flow__arrow">↓</div>
+            <div class="sol-flow__row sol-flow__row--res"><span class="sol-flow__k">РЕЗУЛЬТАТ</span><p>Контроль в реальном времени без остановки линии</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ============ 06 ОТРАСЛИ ============ -->
+<section class="section section--dark" id="industries">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line label--on-dark">ОТРАСЛИ</div>
+      <h2 class="h2 h2--light">Машинное зрение для разных отраслей</h2>
+      <p class="section__sub section__sub--light">Наведите на отрасль — покажем типовую задачу контроля и кадр системы.</p>
+    </div>
+
+    <div class="ind" data-reveal>
+      <div class="ind__list" role="tablist">
+        <button class="ind__item is-active" data-ind="0" role="tab" aria-selected="true">
+          <span class="ind__name">Автомобильная промышленность</span>
+          <span class="ind__task">Геометрия кузова, положение узлов</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="1" role="tab" aria-selected="false">
+          <span class="ind__name">Металлургия</span>
+          <span class="ind__task">Дефекты поверхности, профиль</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="2" role="tab" aria-selected="false">
+          <span class="ind__name">Фармацевтика</span>
+          <span class="ind__task">Упаковка, маркировка, количество</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="3" role="tab" aria-selected="false">
+          <span class="ind__name">Пищевая промышленность</span>
+          <span class="ind__task">Наличие продукта, крышка, этикетка</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="4" role="tab" aria-selected="false">
+          <span class="ind__name">Электроника</span>
+          <span class="ind__task">Компоненты, пайка, DataMatrix</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="5" role="tab" aria-selected="false">
+          <span class="ind__name">Текстиль</span>
+          <span class="ind__task">Дефекты ткани на ходу</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="6" role="tab" aria-selected="false">
+          <span class="ind__name">Строительство</span>
+          <span class="ind__task">Геометрия изделий, контроль СИЗ</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+        <button class="ind__item" data-ind="7" role="tab" aria-selected="false">
+          <span class="ind__name">Аттракционы и парки развлечений</span>
+          <span class="ind__task">Контроль зон, присутствие, СИЗ</span>
+          <span class="ind__arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div class="ind__preview" id="indPreview">
+        <div class="ind__frame">
+          <div class="ind__panel is-active" data-panel="0">
+            <svg viewBox="0 0 640 460" aria-label="Контроль кузова автомобиля">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <path d="M60 330 L130 220 L280 175 L430 175 L540 235 L590 330 Z" fill="#171C26" stroke="#39414F" stroke-width="2"/>
+              <path d="M150 225 L290 195 L410 195 L505 240" fill="none" stroke="#5B8CFF" stroke-width="2" stroke-dasharray="6 6"/>
+              <g fill="#D6FF3D"><circle cx="130" cy="220" r="7"/><circle cx="280" cy="175" r="7"/><circle cx="430" cy="175" r="7"/><circle cx="540" cy="235" r="7"/></g>
+              <g stroke="#D6FF3D" stroke-width="2"><path d="M130 220 L280 175"/><path d="M430 175 L540 235"/></g>
+              <rect x="236" y="345" width="180" height="30" rx="4" fill="#0B0D12" stroke="#D6FF3D"/>
+              <text x="326" y="365" text-anchor="middle" class="svg-mono" fill="#D6FF3D">GEOMETRY · PASS</text>
+              <rect x="24" y="24" width="250" height="28" rx="4" fill="#0B0D12" fill-opacity=".8"/>
+              <text x="40" y="43" class="svg-tag" fill="#8892A4">BODY SHOP · 12 CAMERAS</text>
+            </svg>
+            <div class="ind__caption"><b>Автомобильная промышленность</b><span>Контроль геометрии кузова и положения элементов в роботизированной ячейке.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="1">
+            <svg viewBox="0 0 640 460" aria-label="Контроль поверхности в металлургии">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="40" y="90" width="560" height="40" fill="#2A3140"/>
+              <rect x="60" y="150" width="520" height="180" rx="6" fill="#4A5466"/>
+              <path d="M100 260 L180 190 L250 255" stroke="#FF4D4F" stroke-width="5" fill="none"/>
+              <rect x="86" y="172" width="180" height="110" rx="4" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="86" y="148" width="126" height="24" rx="3" fill="#FF4D4F"/>
+              <text x="98" y="165" class="svg-label" fill="#fff">NOK · CRACK</text>
+              <path d="M340 240 L420 300 L500 230" stroke="#D6FF3D" stroke-width="5" fill="none"/>
+              <rect x="320" y="210" width="200" height="110" rx="4" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="320" y="186" width="110" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="332" y="203" class="svg-label" fill="#0B0D12">SURFACE OK</text>
+              <g transform="translate(60,40)"><rect width="520" height="24" rx="4" fill="#171C26" stroke="#39414F"/><g fill="#5B8CFF"><circle cx="60" cy="12" r="5"/><circle cx="180" cy="12" r="5"/><circle cx="300" cy="12" r="5"/><circle cx="420" cy="12" r="5"/></g></g>
+              <rect x="24" y="380" width="280" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="400" class="svg-tag" fill="#8892A4">HOT STRIP · SURFACE CONTROL</text>
+            </svg>
+            <div class="ind__caption"><b>Металлургия</b><span>Обнаружение дефектов поверхности и контроль продукции на линии.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="2">
+            <svg viewBox="0 0 640 460" aria-label="Контроль фармацевтической упаковки">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="40" y="330" width="560" height="30" fill="#2A3140"/>
+              <g transform="translate(80,180)"><rect width="150" height="150" rx="10" fill="#E7EDF7"/><g fill="#B6BFCE"><rect x="16" y="16" width="36" height="36" rx="5"/><rect x="58" y="16" width="36" height="36" rx="5"/><rect x="100" y="16" width="36" height="36" rx="5"/><rect x="16" y="58" width="36" height="36" rx="5"/><rect x="58" y="58" width="36" height="36" rx="5"/><rect x="100" y="58" width="36" height="36" rx="5"/><rect x="16" y="100" width="36" height="36" rx="5"/><rect x="58" y="100" width="36" height="36" rx="5"/><rect x="100" y="100" width="36" height="36" rx="5"/></g></g>
+              <g transform="translate(260,180)"><rect width="150" height="150" rx="10" fill="#E7EDF7"/><rect x="20" y="30" width="110" height="90" rx="5" fill="#12151C"/><g fill="#E7EDF7"><rect x="28" y="38" width="16" height="16"/><rect x="106" y="38" width="16" height="16"/><rect x="28" y="96" width="16" height="16"/><rect x="54" y="40" width="8" height="8"/><rect x="70" y="54" width="8" height="8"/><rect x="54" y="70" width="8" height="8"/><rect x="86" y="86" width="12" height="10"/></g></g>
+              <g transform="translate(440,180)"><rect width="120" height="150" rx="10" fill="#C9D2E0"/><rect x="18" y="26" width="84" height="70" rx="4" fill="#1C222D"/><rect x="28" y="40" width="64" height="8" fill="#5B8CFF"/><rect x="28" y="56" width="44" height="8" fill="#39414F"/><rect x="28" y="72" width="54" height="8" fill="#39414F"/></g>
+              <rect x="72" y="172" width="166" height="166" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="72" y="148" width="126" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="84" y="165" class="svg-label" fill="#0B0D12">COUNT OK 9/9</text>
+              <rect x="252" y="172" width="166" height="166" rx="6" fill="none" stroke="#5B8CFF" stroke-width="3"/>
+              <rect x="252" y="148" width="96" height="24" rx="3" fill="#5B8CFF"/>
+              <text x="264" y="165" class="svg-label" fill="#fff">CODE OK</text>
+              <rect x="432" y="172" width="136" height="166" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="432" y="148" width="96" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="444" y="165" class="svg-label" fill="#0B0D12">LABEL OK</text>
+              <rect x="24" y="400" width="300" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="420" class="svg-tag" fill="#8892A4">PHARMA · PACK + CODE + COUNT</text>
+            </svg>
+            <div class="ind__caption"><b>Фармацевтика</b><span>Контроль упаковки, маркировки и количества продукции.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="3">
+            <svg viewBox="0 0 640 460" aria-label="Контроль на пищевой линии">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="40" y="340" width="560" height="34" fill="#2A3140"/>
+              <g fill="#C9D2E0">
+                <path d="M80 340 V240 a60 40 0 0 1 120 0 V340 Z"/>
+                <path d="M260 340 V240 a60 40 0 0 1 120 0 V340 Z"/>
+                <path d="M440 340 V240 a60 40 0 0 1 120 0 V340 Z" fill="#39414F"/>
+              </g>
+              <g fill="#1C222D"><rect x="96" y="270" width="88" height="50" rx="4"/><rect x="276" y="270" width="88" height="50" rx="4"/><rect x="456" y="270" width="88" height="50" rx="4"/></g>
+              <g fill="#D6FF3D" font-family="monospace" font-size="15"><text x="104" y="300">FILL OK</text><text x="284" y="300">FILL OK</text></g>
+              <rect x="74" y="232" width="132" height="116" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="254" y="232" width="132" height="116" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="434" y="232" width="132" height="116" rx="6" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="434" y="208" width="94" height="24" rx="3" fill="#FF4D4F"/>
+              <text x="446" y="225" class="svg-label" fill="#fff">NO CAP</text>
+              <rect x="74" y="208" width="96" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="86" y="225" class="svg-label" fill="#0B0D12">OK ×2</text>
+              <rect x="24" y="404" width="320" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="424" class="svg-tag" fill="#8892A4">FOOD · CAP + FILL + LABEL</text>
+            </svg>
+            <div class="ind__caption"><b>Пищевая промышленность</b><span>Контроль наличия продукта, упаковки и маркировки.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="4">
+            <svg viewBox="0 0 640 460" aria-label="Контроль электронных плат">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="50" y="80" width="540" height="300" rx="10" fill="#1E4D3A"/>
+              <g stroke="#2E7A5A" stroke-width="2" fill="none"><path d="M50 150h160v60h140v-70h180M210 380v-70h120v-60"/></g>
+              <g fill="#0D1117"><rect x="90" y="110" width="90" height="70" rx="5"/><rect x="230" y="110" width="70" height="55" rx="4"/><rect x="350" y="230" width="120" height="80" rx="5"/><rect x="500" y="110" width="60" height="60" rx="4"/></g>
+              <g fill="#C9D2E0"><rect x="98" y="118" width="74" height="54" rx="4"/><rect x="238" y="118" width="54" height="39" rx="3"/><rect x="508" y="118" width="44" height="44" rx="3"/></g>
+              <g transform="translate(366,246)" fill="#0D1117"><rect width="88" height="60" fill="#E7EDF7"/><rect x="6" y="6" width="18" height="18"/><rect x="64" y="6" width="18" height="18"/><rect x="6" y="36" width="18" height="18"/><rect x="32" y="8" width="8" height="8"/><rect x="46" y="20" width="8" height="8"/><rect x="32" y="36" width="8" height="8"/><rect x="54" y="42" width="12" height="12"/><rect x="72" y="32" width="8" height="22"/></g>
+              <rect x="84" y="104" width="102" height="82" rx="5" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+              <rect x="84" y="80" width="76" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="96" y="97" class="svg-label" fill="#0B0D12">IC · OK</text>
+              <rect x="360" y="240" width="100" height="72" rx="5" fill="none" stroke="#5B8CFF" stroke-width="3"/>
+              <rect x="360" y="216" width="84" height="24" rx="3" fill="#5B8CFF"/>
+              <text x="372" y="233" class="svg-label" fill="#fff">DM · OK</text>
+              <rect x="494" y="104" width="72" height="72" rx="5" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="466" y="80" width="100" height="24" rx="3" fill="#FF4D4F"/>
+              <text x="478" y="97" class="svg-label" fill="#fff">SOLDER NOK</text>
+              <rect x="24" y="410" width="290" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="430" class="svg-tag" fill="#8892A4">SMT · COMPONENTS + CODE</text>
+            </svg>
+            <div class="ind__caption"><b>Электроника</b><span>Контроль компонентов, пайки и DataMatrix на платах.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="5">
+            <svg viewBox="0 0 640 460" aria-label="Контроль текстиля">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="40" y="70" width="560" height="320" fill="#171C26"/>
+              <g stroke="#39414F" stroke-width="2"><path d="M40 110h560M40 150h560M40 190h560M40 230h560M40 270h560M40 310h560M40 350h560"/></g>
+              <g fill="#2E7A5A">
+                <rect x="70" y="90" width="60" height="44"/><rect x="170" y="90" width="60" height="44"/><rect x="270" y="90" width="60" height="44"/><rect x="370" y="90" width="60" height="44"/><rect x="470" y="90" width="60" height="44"/>
+                <rect x="120" y="170" width="60" height="44"/><rect x="220" y="170" width="60" height="44"/><rect x="320" y="170" width="60" height="44"/><rect x="420" y="170" width="60" height="44"/><rect x="520" y="170" width="60" height="44"/>
+                <rect x="70" y="250" width="60" height="44"/><rect x="170" y="250" width="60" height="44"/><rect x="270" y="250" width="60" height="44"/><rect x="370" y="250" width="60" height="44"/><rect x="470" y="250" width="60" height="44"/>
+              </g>
+              <path d="M300 130 C330 180, 350 190, 370 250" stroke="#FF4D4F" stroke-width="6" fill="none"/>
+              <rect x="286" y="120" width="110" height="150" rx="5" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="286" y="96" width="92" height="24" rx="3" fill="#FF4D4F"/>
+              <text x="298" y="113" class="svg-label" fill="#fff">TEAR · NOK</text>
+              <g stroke="#D6FF3D" stroke-width="2" stroke-dasharray="5 5"><path d="M70 60h100"/><path d="M70 54v12"/><path d="M170 54v12"/></g>
+              <text x="80" y="50" class="svg-mono" fill="#D6FF3D">ZONE 01–05</text>
+              <rect x="24" y="410" width="300" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="430" class="svg-tag" fill="#8892A4">TEXTILE · DEFECT MAP</text>
+            </svg>
+            <div class="ind__caption"><b>Текстиль</b><span>Обнаружение дефектов ткани в процессе производства.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="6">
+            <svg viewBox="0 0 640 460" aria-label="Контроль в строительстве">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="60" y="300" width="520" height="40" fill="#2A3140"/>
+              <g fill="#6E788C">
+                <rect x="90" y="200" width="140" height="100" rx="6"/>
+                <rect x="250" y="200" width="140" height="100" rx="6"/>
+                <rect x="410" y="200" width="140" height="100" rx="6"/>
+              </g>
+              <g stroke="#D6FF3D" stroke-width="2" stroke-dasharray="6 5" fill="none">
+                <rect x="84" y="194" width="152" height="112" rx="6"/>
+                <rect x="244" y="194" width="152" height="112" rx="6"/>
+              </g>
+              <rect x="404" y="194" width="152" height="112" rx="6" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <rect x="404" y="170" width="130" height="24" rx="3" fill="#FF4D4F"/>
+              <text x="416" y="187" class="svg-label" fill="#fff">SIZE OUT OF TOL</text>
+              <rect x="84" y="170" width="116" height="24" rx="3" fill="#D6FF3D"/>
+              <text x="96" y="187" class="svg-label" fill="#0B0D12">DIM · PASS</text>
+              <g stroke="#D6FF3D" stroke-width="1.5"><path d="M90 170v-24M230 170v-24M90 152h140"/></g>
+              <text x="130" y="146" class="svg-mono" fill="#D6FF3D">140.0 mm</text>
+              <g transform="translate(470,60)">
+                <circle cx="40" cy="30" r="24" fill="#B6BFCE"/><path d="M16 26a24 24 0 0 1 48 0z" fill="#F2C94C"/>
+                <rect x="10" y="60" width="60" height="70" rx="12" fill="#5B8CFF"/>
+                <rect x="10" y="60" width="60" height="70" rx="12" fill="none" stroke="#D6FF3D" stroke-width="2.5"/>
+                <rect x="4" y="40" width="72" height="20" rx="3" fill="#D6FF3D"/>
+                <text x="12" y="55" class="svg-label" fill="#0B0D12">HELMET OK</text>
+              </g>
+              <rect x="24" y="410" width="310" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="430" class="svg-tag" fill="#8892A4">CONSTRUCTION · DIM + PPE</text>
+            </svg>
+            <div class="ind__caption"><b>Строительство</b><span>Геометрия изделий и контроль СИЗ персонала.</span></div>
+          </div>
+
+          <div class="ind__panel" data-panel="7">
+            <svg viewBox="0 0 640 460" aria-label="Контроль зон на аттракционах">
+              <rect width="640" height="460" fill="#0B0E13"/>
+              <rect x="40" y="330" width="560" height="30" fill="#2A3140"/>
+              <!-- ride structure -->
+              <g stroke="#6E788C" stroke-width="10" fill="none" stroke-linecap="round">
+                <path d="M120 330 L200 130 L440 130 L520 330"/>
+                <path d="M200 130 L320 240 L440 130"/>
+              </g>
+              <g fill="#5B8CFF"><rect x="290" y="230" width="60" height="44" rx="8"/></g>
+              <path d="M260 200 L380 200 L400 300 L240 300 Z" fill="#FF4D4F" fill-opacity=".1" stroke="#FF4D4F" stroke-width="2.5" stroke-dasharray="8 6"/>
+              <text x="272" y="222" class="svg-label" fill="#FF4D4F">RESTRICTED ZONE</text>
+              <circle cx="320" cy="262" r="20" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+              <path d="M306 248 L334 276 M334 248 L306 276" stroke="#FF4D4F" stroke-width="4"/>
+              <!-- people -->
+              <g transform="translate(90,250)"><circle cx="16" cy="16" r="14" fill="#B6BFCE"/><rect x="4" y="34" width="24" height="46" rx="8" fill="#39414F"/><rect x="0" y="30" width="32" height="56" rx="6" fill="none" stroke="#D6FF3D" stroke-width="2.5"/><rect x="-4" y="14" width="40" height="18" rx="3" fill="#D6FF3D"/><text x="2" y="28" class="svg-label" fill="#0B0D12">OK</text></g>
+              <g transform="translate(500,250)"><circle cx="16" cy="16" r="14" fill="#B6BFCE"/><rect x="4" y="34" width="24" height="46" rx="8" fill="#39414F"/><rect x="0" y="30" width="32" height="56" rx="6" fill="none" stroke="#FF4D4F" stroke-width="2.5"/><rect x="-10" y="14" width="52" height="18" rx="3" fill="#FF4D4F"/><text x="-6" y="28" class="svg-label" fill="#fff">ALARM</text></g>
+              <rect x="24" y="24" width="270" height="28" rx="4" fill="#0B0D12" fill-opacity=".8"/>
+              <text x="40" y="43" class="svg-tag" fill="#8892A4">ZONE CONTROL · PRESENCE + PPE</text>
+              <rect x="24" y="410" width="330" height="30" rx="4" fill="#0B0D12"/>
+              <text x="40" y="430" class="svg-tag" fill="#8892A4">AMUSEMENT · SAFETY ZONES</text>
+            </svg>
+            <div class="ind__caption"><b>Аттракционы и парки развлечений</b><span>Контроль опасных зон, присутствия людей и СИЗ.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 07 ИНТЕГРАЦИЯ ============ -->
+<section class="section section--graphite" id="integration">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line label--on-dark">ИНТЕГРАЦИЯ · АСУ ТП</div>
+      <h2 class="h2 h2--light">Машинное зрение становится частью вашей АСУ ТП</h2>
+      <p class="section__sub section__sub--light">Камера — не отдельная игрушка. Результат уходит в ваш контур управления: PLC, SCADA, MES.</p>
+    </div>
+
+    <div class="intg" data-reveal>
+      <!-- stack -->
+      <div class="intg__stack">
+        <div class="intg__node intg__node--cam">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="16" height="14" rx="3"/><path d="M19 12l6-3v10l-6-3"/><circle cx="11" cy="14" r="3"/></svg>
+          </span>
+          <div><b>КАМЕРА</b><span>съёмка, экспозиция, ROI</span></div>
+          <em class="intg__pulse" aria-hidden="true"></em>
+        </div>
+        <div class="intg__link" aria-hidden="true"><i></i></div>
+        <div class="intg__node">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="5" width="20" height="18" rx="3"/><path d="M8 10h8M8 14h12M8 18h6"/><circle cx="20" cy="10" r="1.6" fill="currentColor"/></svg>
+          </span>
+          <div><b>ПРОМЫШЛЕННЫЙ ПК</b><span>Edge-обработка, детерминированное время</span></div>
+        </div>
+        <div class="intg__link" aria-hidden="true"><i></i></div>
+        <div class="intg__node intg__node--core">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="6" y="6" width="16" height="16" rx="4"/><rect x="11" y="11" width="6" height="6" rx="1.5"/><path d="M10 3v3M14 3v3M18 3v3M10 22v3M14 22v3M18 22v3M3 10h3M3 14h3M3 18h3M22 10h3M22 14h3M22 18h3"/></svg>
+          </span>
+          <div><b>MACHINE VISION / AI VISION</b><span>анализ, классификация, измерения</span></div>
+        </div>
+        <div class="intg__link" aria-hidden="true"><i></i></div>
+        <div class="intg__node">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="8" width="20" height="13" rx="2"/><path d="M8 8V6h12v2M9 13h4M9 17h8"/></svg>
+          </span>
+          <div><b>PLC</b><span>сигнал OK / NOK, манипуляции, отсев</span></div>
+        </div>
+        <div class="intg__link" aria-hidden="true"><i></i></div>
+        <div class="intg__node">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="22" height="15" rx="2"/><path d="M7 15l4-4 3 3 5-6 3 4"/><path d="M10 24h8"/></svg>
+          </span>
+          <div><b>SCADA</b><span>панель оператора, события, тревоги</span></div>
+        </div>
+        <div class="intg__link" aria-hidden="true"><i></i></div>
+        <div class="intg__node">
+          <span class="intg__icon" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="9" height="9" rx="2"/><rect x="15" y="4" width="9" height="9" rx="2"/><rect x="4" y="15" width="9" height="9" rx="2"/><rect x="15" y="15" width="9" height="9" rx="2"/></svg>
+          </span>
+          <div><b>MES</b><span>архив изображений, отчёты, партии</span></div>
+        </div>
+      </div>
+
+      <!-- data / devices -->
+      <div class="intg__side">
+        <div class="intg__card">
+          <div class="intg__card-title">ПЕРЕДАЧА РЕЗУЛЬТАТОВ</div>
+          <div class="intg__chips">
+            <span class="chip chip--ok">OK / NOK</span>
+            <span class="chip">измерения</span>
+            <span class="chip chip--alert">тревоги</span>
+            <span class="chip">события</span>
+            <span class="chip chip--blue">архив изображений</span>
+            <span class="chip">отчёты</span>
+          </div>
+        </div>
+
+        <div class="intg__card">
+          <div class="intg__card-title">ОБОРУДОВАНИЕ КОНТУРА</div>
+          <div class="intg__devices">
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="4" y="6" width="56" height="34" rx="4" fill="#1C222D" stroke="#4A5466"/><rect x="10" y="12" width="30" height="16" rx="2" fill="#0B0E13"/><path d="M14 20h22" stroke="#5B8CFF" stroke-width="2"/><g fill="#4A5466"><rect x="46" y="14" width="8" height="4" rx="1"/><rect x="46" y="22" width="8" height="4" rx="1"/><rect x="46" y="30" width="8" height="4" rx="1"/></g></svg>
+              <span>Промышленный ПК</span>
+            </div>
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="6" y="10" width="52" height="28" rx="3" fill="#2A3140" stroke="#4A5466"/><g fill="#4A5466"><rect x="12" y="16" width="6" height="16" rx="1"/><rect x="22" y="16" width="6" height="16" rx="1"/><rect x="32" y="16" width="6" height="16" rx="1"/><rect x="42" y="16" width="6" height="16" rx="1"/></g><circle cx="52" cy="20" r="2" fill="#D6FF3D"/></svg>
+              <span>PLC</span>
+            </div>
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="6" y="6" width="52" height="34" rx="3" fill="#12151C" stroke="#4A5466"/><path d="M12 30l8-8 6 5 9-11 8 9" stroke="#5B8CFF" stroke-width="2" fill="none"/><rect x="12" y="12" width="16" height="4" rx="1" fill="#4A5466"/></svg>
+              <span>SCADA</span>
+            </div>
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="8" y="8" width="20" height="14" rx="2" fill="#1C222D" stroke="#4A5466"/><rect x="36" y="8" width="20" height="14" rx="2" fill="#1C222D" stroke="#4A5466"/><rect x="8" y="26" width="20" height="14" rx="2" fill="#1C222D" stroke="#4A5466"/><rect x="36" y="26" width="20" height="14" rx="2" fill="#1C222D" stroke="#4A5466"/><g fill="#5B8CFF"><circle cx="18" cy="15" r="2"/><circle cx="46" cy="15" r="2"/><circle cx="18" cy="33" r="2"/><circle cx="46" cy="33" r="2"/></g></svg>
+              <span>MES</span>
+            </div>
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="10" y="6" width="44" height="30" rx="4" fill="#1C222D" stroke="#4A5466"/><rect x="16" y="12" width="32" height="18" rx="2" fill="#0B0E13"/><rect x="20" y="16" width="24" height="4" rx="1" fill="#D6FF3D"/><rect x="20" y="23" width="16" height="4" rx="1" fill="#4A5466"/><rect x="26" y="36" width="12" height="6" fill="#4A5466"/></svg>
+              <span>Панель оператора</span>
+            </div>
+            <div class="dev">
+              <svg viewBox="0 0 64 48" aria-hidden="true"><rect x="16" y="4" width="32" height="40" rx="5" fill="#12151C" stroke="#4A5466"/><rect x="22" y="10" width="20" height="24" rx="2" fill="#0B0E13"/><path d="M26 18h12M26 24h8" stroke="#5B8CFF" stroke-width="2"/><circle cx="32" cy="39" r="3" fill="#4A5466"/></svg>
+              <span>Мобильный терминал</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="intg__note">
+          <b>Протоколы и интерфейсы</b>
+          <span>OPC UA · Modbus TCP · MQTT · REST · Profinet · аналоговые и дискретные I/O</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ 08 КАК МЫ РАБОТАЕМ ============ -->
+<section class="section section--light" id="process">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line">ПРОЦЕСС</div>
+      <h2 class="h2">От задачи до промышленного решения</h2>
+      <p class="section__sub">Пять последовательных этапов: от первичной задачи до промышленного внедрения.</p>
+    </div>
+
+    <div class="timeline" data-reveal>
+      <div class="timeline__line" aria-hidden="true"><span class="timeline__progress"></span></div>
+
+      <div class="tl-step">
+        <div class="tl-step__dot" aria-hidden="true"></div>
+        <div class="tl-step__num">01</div>
+        <h3 class="tl-step__title">ОБСЛЕДОВАНИЕ</h3>
+        <p class="tl-step__text">Разбираем задачу, освещение, цикл, допуски, продукцию и требования к интеграции.</p>
+      </div>
+
+      <div class="tl-step">
+        <div class="tl-step__dot" aria-hidden="true"></div>
+        <div class="tl-step__num">02</div>
+        <h3 class="tl-step__title">ТЕСТИРОВАНИЕ</h3>
+        <p class="tl-step__text">Проверяем технологию на ваших деталях и кадрах: камера, свет, алгоритм.</p>
+      </div>
+
+      <div class="tl-step">
+        <div class="tl-step__dot" aria-hidden="true"></div>
+        <div class="tl-step__num">03</div>
+        <h3 class="tl-step__title">ПИЛОТ</h3>
+        <p class="tl-step__text">Устанавливаем стенд на линии и подтверждаем результат в реальных условиях.</p>
+      </div>
+
+      <div class="tl-step">
+        <div class="tl-step__dot" aria-hidden="true"></div>
+        <div class="tl-step__num">04</div>
+        <h3 class="tl-step__title">ИНТЕГРАЦИЯ</h3>
+        <p class="tl-step__text">Подключаем к PLC / SCADA / MES, настраиваем интерфейс и архив изображений.</p>
+      </div>
+
+      <div class="tl-step">
+        <div class="tl-step__dot" aria-hidden="true"></div>
+        <div class="tl-step__num">05</div>
+        <h3 class="tl-step__title">МАСШТАБИРОВАНИЕ</h3>
+        <p class="tl-step__text">Разворачиваем на другие линии, обучаем персонал, передаём документацию.</p>
+      </div>
+    </div>
+
+    <div class="process-note" data-reveal>
+      <span class="process-note__mark" aria-hidden="true"></span>
+      <p><b>Проверяем решение на реальной задаче до масштабного внедрения.</b> Пилот снимает технологические риски до закупки серийного комплекта.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 09 КЕЙСЫ ============ -->
+<section class="section section--dark" id="cases">
+  <div class="container">
+    <div class="section__head" data-reveal>
+      <div class="label label--line label--on-dark">КЕЙСЫ</div>
+      <h2 class="h2 h2--light">Реальные задачи. Реальные системы.</h2>
+      <p class="section__sub section__sub--light">Примеры внедрений: отрасль, задача, решение, результат и интеграция.</p>
+    </div>
+
+    <div class="cases" data-reveal>
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="30" y="40" width="460" height="26" rx="4" fill="#1C222D" stroke="#39414F"/>
+            <path d="M60 250 L120 160 L240 130 L360 130 L450 175 L470 250 Z" fill="#171C26" stroke="#39414F" stroke-width="2"/>
+            <g fill="#D6FF3D"><circle cx="120" cy="160" r="6"/><circle cx="240" cy="130" r="6"/><circle cx="360" cy="130" r="6"/><circle cx="450" cy="175" r="6"/></g>
+            <g stroke="#D6FF3D" stroke-width="2"><path d="M120 160 L240 130"/><path d="M360 130 L450 175"/></g>
+            <g transform="translate(40,50)"><rect width="70" height="54" rx="6" fill="#232A36" stroke="#4A5466"/><circle cx="35" cy="30" r="14" fill="#0B0E13" stroke="#6E788C" stroke-width="3"/><circle cx="31" cy="26" r="4" fill="#5B8CFF"/></g>
+            <g transform="translate(410,50)"><rect width="70" height="54" rx="6" fill="#232A36" stroke="#4A5466"/><circle cx="35" cy="30" r="14" fill="#0B0E13" stroke="#6E788C" stroke-width="3"/><circle cx="31" cy="26" r="4" fill="#5B8CFF"/></g>
+            <rect x="170" y="262" width="180" height="26" rx="4" fill="#0B0D12" stroke="#D6FF3D"/>
+            <text x="260" y="280" text-anchor="middle" class="svg-mono" fill="#D6FF3D">12 CAM · PASS</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Автомобильная промышленность</span></div>
+          <h3 class="case__title">Контроль геометрии кузова</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Проверка размеров и положения элементов кузова на участке сборки.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Камеры по периметру ячейки, общая система координат, измерение точек.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Автоматический контроль в реальном времени</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>Сигнал в PLC, данные в SCADA</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="40" y="70" width="440" height="34" fill="#2A3140"/>
+            <rect x="50" y="130" width="420" height="130" rx="6" fill="#4A5466"/>
+            <path d="M90 220 L150 160 L210 215" stroke="#FF4D4F" stroke-width="5" fill="none"/>
+            <rect x="76" y="146" width="160" height="100" rx="4" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="76" y="122" width="120" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="88" y="139" class="svg-label" fill="#fff">NOK · CRACK</text>
+            <path d="M300 200 L360 245 L430 180" stroke="#D6FF3D" stroke-width="5" fill="none"/>
+            <rect x="280" y="160" width="180" height="110" rx="4" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="280" y="136" width="106" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="292" y="153" class="svg-label" fill="#0B0D12">SURFACE OK</text>
+            <rect x="24" y="264" width="240" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">SURFACE INSPECTION</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Металлургия</span></div>
+          <h3 class="case__title">Контроль поверхности проката</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Обнаружение трещин, рисок и включений на движущемся прокате.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Линейные камеры, контролируемая подсветка, AI-классификация дефектов.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Автоматическое определение NOK</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>Сигнал отсева в PLC, архив кадров</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="30" y="220" width="460" height="26" fill="#2A3140"/>
+            <g transform="translate(50,100)"><rect width="120" height="120" rx="8" fill="#E7EDF7"/><g fill="#B6BFCE"><rect x="14" y="14" width="28" height="28" rx="4"/><rect x="48" y="14" width="28" height="28" rx="4"/><rect x="82" y="14" width="28" height="28" rx="4"/><rect x="14" y="48" width="28" height="28" rx="4"/><rect x="48" y="48" width="28" height="28" rx="4"/><rect x="82" y="48" width="28" height="28" rx="4"/><rect x="14" y="82" width="28" height="28" rx="4"/><rect x="48" y="82" width="28" height="28" rx="4"/><rect x="82" y="82" width="28" height="28" rx="4"/></g></g>
+            <g transform="translate(200,100)"><rect width="120" height="120" rx="8" fill="#E7EDF7"/><rect x="18" y="24" width="84" height="72" rx="4" fill="#12151C"/><g fill="#E7EDF7"><rect x="26" y="32" width="14" height="14"/><rect x="80" y="32" width="14" height="14"/><rect x="26" y="76" width="14" height="14"/><rect x="48" y="34" width="6" height="6"/><rect x="62" y="46" width="6" height="6"/><rect x="48" y="62" width="6" height="6"/></g></g>
+            <g transform="translate(350,100)"><rect width="120" height="120" rx="8" fill="#C9D2E0"/><rect x="16" y="22" width="88" height="76" rx="4" fill="#1C222D"/><rect x="26" y="36" width="68" height="10" fill="#5B8CFF"/><rect x="26" y="54" width="46" height="10" fill="#39414F"/><rect x="26" y="72" width="58" height="10" fill="#39414F"/></g>
+            <rect x="44" y="94" width="132" height="132" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="44" y="70" width="120" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="56" y="87" class="svg-label" fill="#0B0D12">COUNT OK 9/9</text>
+            <rect x="194" y="94" width="132" height="132" rx="6" fill="none" stroke="#5B8CFF" stroke-width="3"/>
+            <rect x="194" y="70" width="96" height="24" rx="3" fill="#5B8CFF"/>
+            <text x="206" y="87" class="svg-label" fill="#fff">LOT CODE</text>
+            <rect x="344" y="94" width="132" height="132" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="344" y="70" width="96" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="356" y="87" class="svg-label" fill="#0B0D12">LABEL OK</text>
+            <rect x="24" y="264" width="260" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">PHARMA LINE · PACK CONTROL</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Фармацевтика</span></div>
+          <h3 class="case__title">Контроль упаковки и маркировки</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Комплектность блистеров, чтение кода партии, проверка этикетки.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Единственная точка контроля: подсчёт, DataMatrix, OCR.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Полный контроль партии на линии</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>PLC + запись в MES</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="40" y="60" width="440" height="180" rx="8" fill="#1E4D3A"/>
+            <g stroke="#2E7A5A" stroke-width="2" fill="none"><path d="M40 120h140v50h120v-60h140M180 240v-70h100v-40"/></g>
+            <g fill="#0D1117"><rect x="80" y="90" width="80" height="60" rx="5"/><rect x="240" y="150" width="110" height="70" rx="5"/><rect x="400" y="90" width="56" height="56" rx="4"/></g>
+            <g fill="#C9D2E0"><rect x="88" y="98" width="64" height="44" rx="4"/><rect x="408" y="98" width="40" height="40" rx="3"/></g>
+            <g transform="translate(256,166)" fill="#0D1117"><rect width="78" height="50" fill="#E7EDF7"/><rect x="6" y="6" width="16" height="16"/><rect x="56" y="6" width="16" height="16"/><rect x="6" y="28" width="16" height="16"/><rect x="30" y="8" width="8" height="8"/><rect x="44" y="20" width="8" height="8"/><rect x="30" y="32" width="8" height="8"/><rect x="48" y="36" width="10" height="10"/></g>
+            <rect x="250" y="160" width="90" height="62" rx="4" fill="none" stroke="#5B8CFF" stroke-width="3"/>
+            <rect x="250" y="136" width="84" height="24" rx="3" fill="#5B8CFF"/>
+            <text x="262" y="153" class="svg-label" fill="#fff">DM · OK</text>
+            <rect x="74" y="84" width="92" height="72" rx="4" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="74" y="60" width="76" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="86" y="77" class="svg-label" fill="#0B0D12">IC · POS</text>
+            <rect x="394" y="84" width="68" height="68" rx="4" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="370" y="60" width="96" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="382" y="77" class="svg-label" fill="#fff">SOLDER NOK</text>
+            <rect x="24" y="264" width="300" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">SMT · COMPONENT + DATAMATRIX</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Электроника</span></div>
+          <h3 class="case__title">Контроль компонентов и DataMatrix</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Наличие и положение компонентов, пайка, чтение кода на плате.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Machine Vision для позиции и кода, AI Vision для дефектов пайки.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Прослеживаемость каждой платы</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>Интеграция с PLC, архив изображений NOK</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="30" y="210" width="460" height="30" fill="#2A3140"/>
+            <g fill="#C9D2E0"><path d="M70 210 V130 a55 36 0 0 1 110 0 V210 Z"/><path d="M220 210 V130 a55 36 0 0 1 110 0 V210 Z"/><path d="M370 210 V130 a55 36 0 0 1 110 0 V210 Z" fill="#39414F"/></g>
+            <g fill="#1C222D"><rect x="86" y="155" width="78" height="44" rx="4"/><rect x="236" y="155" width="78" height="44" rx="4"/><rect x="386" y="155" width="78" height="44" rx="4"/></g>
+            <g fill="#D6FF3D" font-family="monospace" font-size="14"><text x="94" y="182">FILL OK</text><text x="244" y="182">FILL OK</text></g>
+            <rect x="64" y="124" width="122" height="106" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="214" y="124" width="122" height="106" rx="6" fill="none" stroke="#D6FF3D" stroke-width="3"/>
+            <rect x="364" y="124" width="122" height="106" rx="6" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="364" y="100" width="96" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="376" y="117" class="svg-label" fill="#fff">NO CAP</text>
+            <rect x="64" y="100" width="70" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="76" y="117" class="svg-label" fill="#0B0D12">OK ×2</text>
+            <rect x="24" y="264" width="300" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">FOOD LINE · CAP + FILL + LABEL</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Пищевая промышленность</span></div>
+          <h3 class="case__title">Наличие продукта и упаковки</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Контроль наличия продукта, крышки и этикетки на скоростной линии.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Компактная станция над конвейером с детерминированным анализом.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Контроль в реальном времени на каждом пакете</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>Сигнал в PLC для отбраковки</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="40" y="50" width="440" height="200" fill="#171C26"/>
+            <g stroke="#39414F" stroke-width="2"><path d="M40 90h440M40 130h440M40 170h440M40 210h440"/></g>
+            <g fill="#2E7A5A"><rect x="70" y="60" width="56" height="40"/><rect x="150" y="60" width="56" height="40"/><rect x="230" y="60" width="56" height="40"/><rect x="310" y="60" width="56" height="40"/><rect x="390" y="60" width="56" height="40"/><rect x="110" y="140" width="56" height="40"/><rect x="190" y="140" width="56" height="40"/><rect x="270" y="140" width="56" height="40"/><rect x="350" y="140" width="56" height="40"/><rect x="70" y="190" width="56" height="40"/><rect x="150" y="190" width="56" height="40"/><rect x="230" y="190" width="56" height="40"/><rect x="310" y="190" width="56" height="40"/><rect x="390" y="190" width="56" height="40"/></g>
+            <path d="M260 100 C285 145, 305 150, 330 200" stroke="#FF4D4F" stroke-width="6" fill="none"/>
+            <rect x="246" y="90" width="110" height="130" rx="5" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="246" y="66" width="92" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="258" y="83" class="svg-label" fill="#fff">TEAR · NOK</text>
+            <g stroke="#D6FF3D" stroke-width="2" stroke-dasharray="5 5"><path d="M70 44h90"/><path d="M70 38v12"/><path d="M160 38v12"/></g>
+            <text x="80" y="34" class="svg-mono" fill="#D6FF3D">ZONE 01–05</text>
+            <rect x="24" y="264" width="300" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">TEXTILE · DEFECT MAP</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Текстиль</span></div>
+          <h3 class="case__title">Дефекты ткани в процессе производства</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Обнаружение разрывов, узлов и переплетений без остановки линии.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Линейные камеры и AI-классификация дефектов по зонам.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Карта дефектов на рулоне</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>События в SCADA, отчёт по партии в MES</p></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="case">
+        <div class="case__media">
+          <svg viewBox="0 0 520 300" aria-hidden="true">
+            <rect width="520" height="300" fill="#0D1117"/>
+            <rect x="40" y="230" width="440" height="26" fill="#2A3140"/>
+            <g fill="#6E788C"><rect x="70" y="150" width="110" height="80" rx="6"/><rect x="205" y="150" width="110" height="80" rx="6"/><rect x="340" y="150" width="110" height="80" rx="6"/></g>
+            <g stroke="#D6FF3D" stroke-width="2.5" stroke-dasharray="6 5" fill="none"><rect x="64" y="144" width="122" height="92" rx="6"/><rect x="199" y="144" width="122" height="92" rx="6"/></g>
+            <rect x="334" y="144" width="122" height="92" rx="6" fill="none" stroke="#FF4D4F" stroke-width="3"/>
+            <rect x="334" y="120" width="130" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="346" y="137" class="svg-label" fill="#fff">SIZE OUT OF TOL</text>
+            <rect x="64" y="120" width="112" height="24" rx="3" fill="#D6FF3D"/>
+            <text x="76" y="137" class="svg-label" fill="#0B0D12">DIM · PASS</text>
+            <g transform="translate(390,40)"><circle cx="36" cy="26" r="22" fill="#B6BFCE"/><path d="M14 22a22 22 0 0 1 44 0z" fill="#F2C94C"/><rect x="8" y="54" width="56" height="64" rx="12" fill="#5B8CFF"/><rect x="8" y="54" width="56" height="64" rx="12" fill="none" stroke="#D6FF3D" stroke-width="2.5"/><rect x="2" y="36" width="68" height="20" rx="3" fill="#D6FF3D"/><text x="10" y="51" class="svg-label" fill="#0B0D12">HELMET</text></g>
+            <rect x="24" y="264" width="310" height="24" rx="4" fill="#0B0D12"/>
+            <text x="36" y="281" class="svg-tag" fill="#8892A4">CONSTRUCTION · DIM + PPE</text>
+          </svg>
+        </div>
+        <div class="case__body">
+          <div class="case__tags"><span class="tag">Строительство</span></div>
+          <h3 class="case__title">Геометрия изделий и контроль СИЗ</h3>
+          <div class="case__kv">
+            <div><span>ЗАДАЧА</span><p>Проверка размеров изделий и контроль касок на участке.</p></div>
+            <div><span>РЕШЕНИЕ</span><p>Измерительные точки + AI-детект людей и СИЗ.</p></div>
+            <div><span>РЕЗУЛЬТАТ</span><p>Размеры в допуске и контроль СИЗ</p></div>
+            <div><span>ИНТЕГРАЦИЯ</span><p>PLC + SCADA-тревоги</p></div>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10 FAQ ============ -->
+<section class="section section--light" id="faq">
+  <div class="container container--narrow">
+    <div class="section__head" data-reveal>
+      <div class="label label--line">FAQ</div>
+      <h2 class="h2">Часто задаваемые вопросы</h2>
+    </div>
+
+    <div class="faq" data-reveal>
+      <details class="faq__item">
+        <summary class="faq__q">Какую технологию выбрать — Machine Vision или AI Vision?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Если задача формализуема — наличие, подсчёт, измерения, коды — достаточно Machine Vision. Если дефекты вариативны, поверхности меняются, освещение нестабильно — нужен AI Vision. Часто система состоит из обоих контуров: детерминированная часть + нейросеть на сложные случаи. Выбор делаем на тестировании ваших деталей.</p></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">Какое разрешение камеры нужно для обнаружения дефектов?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Разрешение считается от размера дефекта и поля зрения: важна не мегапиксели, а размер пикселя на объекте. Правило — минимальный дефект должен занимать несколько пикселей. После обследования подбираем камеру, объектив, подсветку и рабочее расстояние.</p></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">Можно ли дообучить модель на собственных данных?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Да. Мы собираем вашу выборку: NOK-образцы, пограничные случаи, варианты продукции. Модель дообучается на этих данных, после чего контролируется на отложенной выборке. Дальнейшее переобучение возможно по мере накопления кадров с линии.</p></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">Можно ли интегрировать систему с существующим PLC?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Да. Передаём OK / NOK, измерения, тревоги и события по OPC UA, Modbus TCP, MQTT, Profinet или через дискретные I/O. Дальше контур SCADA и MES получает данные без разрыва вашего АСУ ТП.</p></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">Можно ли провести тестирование на наших деталях?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Да — это базовый этап. Пришлите фото или видео объекта, а лучше несколько образцов и характерных дефектов. Мы оценим технологию, разрешение, подсветку и дадим заключение по применимости до установки на линию.</p></div>
+      </details>
+
+      <details class="faq__item">
+        <summary class="faq__q">Сколько времени занимает внедрение?<span class="faq__icon" aria-hidden="true"></span></summary>
+        <div class="faq__a"><p>Зависит от задачи: типовой контроль наличия или маркировки — недели; пилот с AI Vision и интеграцией в АСУ ТП — от нескольких недель до 1–2 месяцев; масштабирование на несколько линий планируется этапами. Точный график фиксируем после обследования.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+<!-- ============ 11 ФИНАЛЬНЫЙ CTA ============ -->
+<section class="section section--cta" id="cta">
+  <div class="container">
+    <div class="cta" data-reveal>
+      <div class="cta__content">
+        <div class="label label--line label--on-dark">ПИЛОТ · КОНСУЛЬТАЦИЯ</div>
+        <h2 class="h2 h2--light">Есть задача на производстве?</h2>
+        <p class="section__sub section__sub--light">Пришлите фото или видео объекта — оценим задачу и предложим подходящий вариант машинного зрения.</p>
+        <div class="cta__actions">
+          <a href="#contact" class="btn btn--accent btn--lg">Обсудить задачу</a>
+          <a href="#contact" class="btn btn--ghost btn--lg" data-prefill="pilot">Запросить пилот</a>
+        </div>
+        <div class="cta__points">
+          <span class="cta__point"><i aria-hidden="true"></i>Ответ по технологии и срокам</span>
+          <span class="cta__point"><i aria-hidden="true"></i>Тест на ваших деталях</span>
+          <span class="cta__point"><i aria-hidden="true"></i>Смета пилота без обязательств</span>
+        </div>
+      </div>
+
+      <div class="cta__visual" aria-hidden="true">
+        <svg viewBox="0 0 420 380">
+          <defs>
+            <linearGradient id="cScan" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#D6FF3D" stop-opacity="0"/><stop offset=".5" stop-color="#D6FF3D" stop-opacity=".85"/><stop offset="1" stop-color="#D6FF3D" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="420" height="380" rx="16" fill="#0B0E13" stroke="#1F2733"/>
+          <g stroke="#fff" stroke-opacity=".05"><path d="M0 95h420M0 190h420M0 285h420M105 0v380M210 0v380M315 0v380"/></g>
+          <!-- camera -->
+          <g transform="translate(150,30)">
+            <rect x="0" y="0" width="120" height="70" rx="10" fill="#1C222D" stroke="#4A5466"/>
+            <rect x="14" y="14" width="40" height="20" rx="4" fill="#0B0E13" stroke="#5A6374"/>
+            <circle cx="34" cy="24" r="4" fill="#D6FF3D"/>
+            <rect x="64" y="12" width="44" height="48" rx="6" fill="#12151C" stroke="#4A5466"/>
+            <circle cx="86" cy="36" r="16" fill="#070A0F" stroke="#6E788C" stroke-width="3"/>
+            <circle cx="82" cy="32" r="4" fill="#5B8CFF"/>
+            <path d="M76 56 L60 170 L112 170 L96 56 Z" fill="#D6FF3D" opacity=".06" stroke="#D6FF3D" stroke-opacity=".3" stroke-dasharray="5 6"/>
+          </g>
+          <!-- part -->
+          <g transform="translate(130,220)">
+            <ellipse cx="80" cy="96" rx="86" ry="16" fill="#000" opacity=".5"/>
+            <rect x="0" y="20" width="160" height="76" rx="10" fill="#8892A4"/>
+            <rect x="0" y="20" width="160" height="20" rx="8" fill="#C9D2E0" opacity=".6"/>
+            <circle cx="80" cy="58" r="22" fill="#39414F"/><circle cx="80" cy="58" r="10" fill="#1C222D"/>
+            <path d="M40 74 L66 50 L92 70 L118 46" stroke="#FF4D4F" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+          </g>
+          <g>
+            <rect x="118" y="230" width="184" height="112" rx="6" fill="none" stroke="#FF4D4F" stroke-width="2.5"/>
+            <rect x="118" y="206" width="118" height="24" rx="3" fill="#FF4D4F"/>
+            <text x="128" y="223" font-family="Inter, sans-serif" font-size="13" font-weight="700" fill="#fff">NOK · SCRATCH</text>
+            <rect x="130" y="352" width="160" height="24" rx="3" fill="#070A0F" stroke="#232C3C"/>
+            <text x="140" y="369" font-family="monospace" font-size="13" fill="#8FB4FF">conf 97.2% · 74 ms</text>
+            <g fill="#FF4D4F"><circle cx="118" cy="230" r="5"/><circle cx="302" cy="230" r="5"/><circle cx="118" cy="342" r="5"/><circle cx="302" cy="342" r="5"/></g>
+          </g>
+          <rect class="cta__scan" x="20" y="230" width="380" height="3" fill="url(#cScan)"/>
+          <rect x="24" y="24" width="180" height="26" rx="4" fill="#070A0F" fill-opacity=".9" stroke="#1F2733"/>
+          <text x="36" y="42" font-family="monospace" font-size="12" fill="#8892A4">LIVE · AI ANALYSIS</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ФОРМА ============ -->
+<section class="section section--form" id="contact">
+  <div class="container container--narrow">
+    <div class="section__head" data-reveal>
+      <div class="label label--line">ОБРАТНАЯ СВЯЗЬ</div>
+      <h2 class="h2">Обсудим вашу задачу</h2>
+      <p class="section__sub">Короткая форма — ответим по технологии, срокам и стоимости пилота.</p>
+    </div>
+
+    <form class="form" id="contactForm" data-reveal novalidate>
+      <div class="form__grid">
+        <div class="field">
+          <label for="fName">Имя</label>
+          <input type="text" id="fName" name="name" placeholder="Как к вам обращаться" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="fCompany">Компания</label>
+          <input type="text" id="fCompany" name="company" placeholder="Название компании" required autocomplete="organization">
+        </div>
+        <div class="field field--full">
+          <label for="fContact">Телефон / Email</label>
+          <input type="text" id="fContact" name="contact" placeholder="+7 (___) ___-__-__ или name@company.ru" required autocomplete="email">
+        </div>
+
+        <div class="field field--full">
+          <span class="field__label">Что необходимо контролировать?</span>
+          <div class="chips-select" role="group" aria-label="Тип контроля">
+            <label class="csel"><input type="checkbox" name="tasks" value="Наличие"><span>Наличие</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Дефекты"><span>Дефекты</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Маркировка"><span>Маркировка</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Измерения"><span>Измерения</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Подсчёт"><span>Подсчёт</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Безопасность"><span>Безопасность</span></label>
+            <label class="csel"><input type="checkbox" name="tasks" value="Другое"><span>Другое</span></label>
+          </div>
+        </div>
+
+        <div class="field field--full">
+          <label for="fDesc">Описание задачи</label>
+          <textarea id="fDesc" name="description" rows="4" placeholder="Продукция, размеры дефектов, скорость линии, требования к интеграции…"></textarea>
+        </div>
+
+        <div class="field field--full">
+          <label class="file">
+            <input type="file" id="fFiles" name="files" multiple accept="image/*,video/*">
+            <span class="file__ui">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+              <span><b>Прикрепить фото / видео</b><small id="fileHint">JPG, PNG, MP4 — кадры объекта контроля</small></span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form__foot">
+        <button type="submit" class="btn btn--accent btn--lg">Получить консультацию</button>
+        <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p>
+      </div>
+
+      <div class="form__success" id="formSuccess" hidden>
+        <span class="form__success-icon" aria-hidden="true">✓</span>
+        <div>
+          <b>Заявка отправлена</b>
+          <p>Свяжемся с вами и уточним детали задачи для оценки технологии.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#hero" class="logo logo--light">
+        <span class="logo__mark">
+          <svg viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect x="1" y="1" width="30" height="30" rx="8" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 11l4.5 11L16 14.5 19.5 22 24 11" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="16" cy="9" r="2" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="logo__text">VDT <b>Vision</b></span>
+      </a>
+      <p>Системы машинного зрения и AI Vision для промышленной автоматизации. Мы создаём систему автоматического контроля, интегрированную в производственный процесс.</p>
+    </div>
+
+    <div class="footer__cols">
+      <div class="footer__col">
+        <b>Разделы</b>
+        <a href="#solutions">Решения</a>
+        <a href="#tasks">Задачи</a>
+        <a href="#industries">Отрасли</a>
+        <a href="#demo">Демо</a>
+        <a href="#integration">Интеграция</a>
+        <a href="#cases">Кейсы</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="footer__col">
+        <b>Задачи контроля</b>
+        <a href="#tasks">Наличие / отсутствие</a>
+        <a href="#tasks">Дефекты</a>
+        <a href="#tasks">Маркировка</a>
+        <a href="#tasks">Измерения</a>
+        <a href="#tasks">Подсчёт</a>
+        <a href="#tasks">Безопасность</a>
+      </div>
+      <div class="footer__col">
+        <b>Контакты</b>
+        <a href="#contact">Обсудить задачу</a>
+        <a href="#contact">Запросить пилот</a>
+        <span class="footer__muted">Интеграция PLC / SCADA / MES</span>
+      </div>
+    </div>
+  </div>
+  <div class="container footer__bottom">
+    <span>© <span id="year">2026</span> VDT Vision. Машинное зрение для промышленности.</span>
+    <span class="footer__bottom-links"><a href="#hero">Наверх ↑</a></span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
