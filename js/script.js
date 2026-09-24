@@ -241,9 +241,9 @@
       var valid = true;
       var required = form.querySelectorAll('[required]');
       required.forEach(function (field) {
-        var empty = !field.value.trim();
-        field.classList.toggle('is-error', empty);
-        if (empty) valid = false;
+        var bad = field.type === 'checkbox' ? !field.checked : !field.value.trim();
+        field.classList.toggle('is-error', bad);
+        if (bad) valid = false;
       });
       if (!valid) {
         var firstErr = form.querySelector('.is-error');
@@ -261,11 +261,12 @@
 
     form.querySelectorAll('[required]').forEach(function (field) {
       field.addEventListener('input', function () { field.classList.remove('is-error'); });
+      field.addEventListener('change', function () { field.classList.remove('is-error'); });
     });
   }
 
   /* ---------- light parallax for hero visual ---------- */
-  var heroVisual = document.querySelector('.hero__visual .scene__svg');
+  var heroVisual = document.querySelector('.hero__visual .scene__img');
   if (heroVisual && !reduceMotion && window.matchMedia('(pointer:fine)').matches) {
     var hero = document.getElementById('hero');
     if (hero) {
